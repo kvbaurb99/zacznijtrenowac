@@ -85,14 +85,6 @@ export function Footer() {
             </div>
           ))}
         </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-zinc-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
-          <p>© {currentYear} ZacznijTrenowac. Wszelkie prawa zastrzeżone.</p>
-          <p className="text-zinc-600">
-            Designed by <span className="text-zinc-500">Kuba</span>
-          </p>
-        </div>
       </div>
     </footer>
   );
