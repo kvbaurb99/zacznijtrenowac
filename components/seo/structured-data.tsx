@@ -142,14 +142,32 @@ export function StructuredData() {
       },
       telephone: "+48600851174",
       email: "darektrener@icloud.com",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Mariana Langiewicza 26",
-        addressLocality: "Bielsko-Biała",
-        postalCode: "43-300",
-        addressRegion: "śląskie",
-        addressCountry: "PL",
-      },
+      workLocation: [
+        {
+          "@type": "Place",
+          name: "Lokalizacja Langiewicza",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Mariana Langiewicza 26",
+            addressLocality: "Bielsko-Biała",
+            postalCode: "43-300",
+            addressRegion: "śląskie",
+            addressCountry: "PL",
+          },
+        },
+        {
+          "@type": "Place",
+          name: "Lokalizacja Kolista",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Kolista 23",
+            addressLocality: "Bielsko-Biała",
+            postalCode: "43-316",
+            addressRegion: "śląskie",
+            addressCountry: "PL",
+          },
+        },
+      ],
       knowsAbout: [
         "Trening siłowy",
         "Trening motoryczny",
@@ -169,13 +187,17 @@ export function StructuredData() {
       },
       telephone: "+48518989721",
       email: "asiatrener@icloud.com",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Kolista 23",
-        addressLocality: "Bielsko-Biała",
-        postalCode: "43-316",
-        addressRegion: "śląskie",
-        addressCountry: "PL",
+      workLocation: {
+        "@type": "Place",
+        name: "Lokalizacja Kolista",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Kolista 23",
+          addressLocality: "Bielsko-Biała",
+          postalCode: "43-316",
+          addressRegion: "śląskie",
+          addressCountry: "PL",
+        },
       },
       knowsAbout: [
         "Trening personalny",
