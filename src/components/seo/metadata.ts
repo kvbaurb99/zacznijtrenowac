@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 export const siteMetadata: Metadata = {
   // Primary Title - max 60 characters, includes main keyword + brand
   title: {
-    default: "Trener Personalny Bielsko-Biała | Zacznij Trenować",
-    template: "%s | Zacznij Trenować - Trener Personalny Bielsko-Biała",
+    default: "Treningi Personalne Bielsko-Biała | Zacznij Trenować",
+    template: "",
   },
 
   // Meta Description - max 155-160 characters, includes CTA + keywords
