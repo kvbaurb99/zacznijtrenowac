@@ -23,6 +23,14 @@ export function StructuredData() {
     priceRange: "$$",
     currenciesAccepted: "PLN",
     paymentAccepted: "Cash",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Mariana Langiewicza 26",
+      addressLocality: "Bielsko-Biała",
+      postalCode: "43-300",
+      addressRegion: "śląskie",
+      addressCountry: "PL",
+    },
     location: [
       {
         "@type": "Place",
@@ -136,10 +144,6 @@ export function StructuredData() {
       "@id": "https://zacznijtrenowac.pl/#dariusz",
       name: "Dariusz Sklarczyk",
       jobTitle: "Trener Personalny",
-      worksFor: {
-        "@type": "LocalBusiness",
-        name: "Zacznij Trenować",
-      },
       telephone: "+48600851174",
       email: "darektrener@icloud.com",
       workLocation: [
@@ -181,10 +185,6 @@ export function StructuredData() {
       "@id": "https://zacznijtrenowac.pl/#asia",
       name: "Asia Sklarczyk",
       jobTitle: "Trener Personalny",
-      worksFor: {
-        "@type": "LocalBusiness",
-        name: "Zacznij Trenować",
-      },
       telephone: "+48518989721",
       email: "asiatrener@icloud.com",
       workLocation: {
