@@ -1,4 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
+import AboutImage from "@/assets/image_one.jpg";
+import Image from "next/image";
 
 const FEATURES = [
   "Treningi siłowe i motoryczne dopasowane do Twoich celów",
@@ -21,11 +23,13 @@ export function About() {
             <div className="absolute -inset-4 bg-linear-to-r from-zinc-800 to-zinc-700 rounded-2xl opacity-30 blur-lg group-hover:opacity-50 transition-opacity duration-500" />
             <div className="relative h-[500px] w-full rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
               {/* Placeholder for couple photo */}
-              <div className="absolute inset-0 bg-zinc-900 flex items-center justify-center">
-                <span className="text-zinc-600 font-medium">
-                  Dariusz i Asia Sklarczyk - Trenerzy Personalni
-                </span>
-              </div>
+              <Image
+                src={AboutImage}
+                priority
+                alt="Dariusz i Asia Sklarczyk - Trenerzy Personalni"
+                fill
+                className="object-cover"
+              />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
             </div>
@@ -46,10 +50,10 @@ export function About() {
                 <span className="w-2 h-2 rounded-full bg-white mr-2" />
                 Trenerzy Personalni Bielsko-Biała
               </div>
-              <h2 className="text-3xl md:text-4xl leading-tight font-bold text-white mb-4">
+              <h1 className="text-3xl md:text-4xl leading-tight font-bold text-white mb-4">
                 Dariusz i Asia Sklarczyk –{" "}
                 <span className="text-zinc-400">Twoi trenerzy personalni</span>
-              </h2>
+              </h1>
               <p className="text-zinc-400 text-lg leading-relaxed">
                 Jesteśmy certyfikowanymi{" "}
                 <strong className="text-zinc-300">

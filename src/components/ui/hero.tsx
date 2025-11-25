@@ -52,12 +52,12 @@ export function Hero() {
 
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4 sm:px-8 max-w-5xl mx-auto gap-8 pt-20">
         <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-          <h1 className="text-5xl sm:text-7xl md:text-5xl font-bold tracking-tight text-white">
+          <p className="text-5xl sm:text-7xl md:text-5xl font-bold tracking-tight text-white">
             ZACZNIJ{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-zinc-200 to-zinc-500">
               TRENOWAĆ
             </span>
-          </h1>
+          </p>
           <p className="text-lg sm:text-lg md:text-lg text-zinc-300 max-w-2xl mx-auto font-light">
             Przekraczaj granice swoich możliwości. Profesjonalne wsparcie w
             drodze do wymarzonej sylwetki.
