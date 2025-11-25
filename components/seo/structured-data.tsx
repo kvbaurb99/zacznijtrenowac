@@ -23,12 +23,32 @@ export function StructuredData() {
     priceRange: "$$",
     currenciesAccepted: "PLN",
     paymentAccepted: "Cash",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Bielsko-Biała",
-      addressRegion: "śląskie",
-      addressCountry: "PL",
-    },
+    location: [
+      {
+        "@type": "Place",
+        name: "Zacznij Trenować - Lokalizacja Langiewicza",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Mariana Langiewicza 26",
+          addressLocality: "Bielsko-Biała",
+          postalCode: "43-300",
+          addressRegion: "śląskie",
+          addressCountry: "PL",
+        },
+      },
+      {
+        "@type": "Place",
+        name: "Zacznij Trenować - Lokalizacja Kolista",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Kolista 23",
+          addressLocality: "Bielsko-Biała",
+          postalCode: "43-316",
+          addressRegion: "śląskie",
+          addressCountry: "PL",
+        },
+      },
+    ],
     areaServed: [
       {
         "@type": "City",
@@ -124,7 +144,9 @@ export function StructuredData() {
       email: "darektrener@icloud.com",
       address: {
         "@type": "PostalAddress",
+        streetAddress: "Mariana Langiewicza 26",
         addressLocality: "Bielsko-Biała",
+        postalCode: "43-300",
         addressRegion: "śląskie",
         addressCountry: "PL",
       },
@@ -149,7 +171,9 @@ export function StructuredData() {
       email: "asiatrener@icloud.com",
       address: {
         "@type": "PostalAddress",
+        streetAddress: "Kolista 23",
         addressLocality: "Bielsko-Biała",
+        postalCode: "43-316",
         addressRegion: "śląskie",
         addressCountry: "PL",
       },
@@ -170,9 +194,7 @@ export function StructuredData() {
     name: "Zacznij Trenować",
     description: "Trenerzy Personalni Bielsko-Biała - Dariusz i Asia Sklarczyk",
     publisher: {
-      "@type": "Organization",
       "@id": "https://zacznijtrenowac.pl/#localbusiness",
-      name: "Zacznij Trenować",
     },
     inLanguage: "pl-PL",
   };
