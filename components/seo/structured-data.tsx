@@ -29,11 +29,6 @@ export function StructuredData() {
       addressRegion: "śląskie",
       addressCountry: "PL",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 49.8224,
-      longitude: 19.0444,
-    },
     areaServed: [
       {
         "@type": "City",
@@ -47,15 +42,15 @@ export function StructuredData() {
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "06:00",
-        closes: "21:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Saturday"],
-        opens: "08:00",
-        closes: "16:00",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
       },
     ],
     sameAs: [
