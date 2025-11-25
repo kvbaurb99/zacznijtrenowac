@@ -1,14 +1,13 @@
-import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 
-export function About() {
-  const features = [
-    "Wspólne doświadczenie i uzupełniająca się wiedza",
-    "Podejście holistyczne – trening, dieta, mindset",
-    "Setki przeprowadzonych metamorfoz",
-    "Opieka trenerska 24/7",
-  ];
+const FEATURES = [
+  "Treningi siłowe i motoryczne dopasowane do Twoich celów",
+  "Indywidualne plany dietetyczne i wsparcie żywieniowe",
+  "Przygotowanie do zawodów fitness i kulturystycznych",
+  "Kompleksowa opieka trenerska 24/7",
+] as const;
 
+export function About() {
   return (
     <section id="about" className="py-24 bg-zinc-950 relative overflow-hidden">
       {/* Decorative background elements */}
@@ -24,7 +23,7 @@ export function About() {
               {/* Placeholder for couple photo */}
               <div className="absolute inset-0 bg-zinc-900 flex items-center justify-center">
                 <span className="text-zinc-600 font-medium">
-                  Zdjęcie Trenerów (Placeholder)
+                  Dariusz i Asia Sklarczyk - Trenerzy Personalni
                 </span>
               </div>
               {/* Overlay gradient */}
@@ -35,7 +34,7 @@ export function About() {
             <div className="absolute -bottom-6 -right-6 bg-white text-black p-6 rounded-xl shadow-xl max-w-[200px] hidden sm:block">
               <p className="text-4xl font-bold">10+</p>
               <p className="text-sm font-medium text-zinc-600 leading-tight mt-1">
-                Lat wspólnego doświadczenia
+                Lat doświadczenia w treningu personalnym
               </p>
             </div>
           </div>
@@ -45,34 +44,45 @@ export function About() {
             <div>
               <div className="inline-flex items-center px-3 py-1 rounded-full border border-zinc-800 bg-zinc-900/50 text-zinc-400 text-sm mb-4">
                 <span className="w-2 h-2 rounded-full bg-white mr-2" />
-                Poznaj nas
+                Trenerzy Personalni Bielsko-Biała
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Duet, który zmieni Twoje <br />
-                <span className="text-zinc-400">podejście do treningu</span>
+              <h2 className="text-3xl md:text-4xl leading-tight font-bold text-white mb-4">
+                Dariusz i Asia Sklarczyk –{" "}
+                <span className="text-zinc-400">Twoi trenerzy personalni</span>
               </h2>
               <p className="text-zinc-400 text-lg leading-relaxed">
-                Jesteśmy małżeństwem trenerów, dla których sport to nie tylko
-                praca, ale styl życia. Łączymy kobiecą i męską perspektywę, aby
-                dostarczyć Ci kompleksowe wsparcie w drodze do lepszej wersji
-                siebie. Razem tworzymy atmosferę, w której poczujesz się
-                komfortowo i zmotywowany do działania.
+                Jesteśmy certyfikowanymi{" "}
+                <strong className="text-zinc-300">
+                  trenerami personalnymi z Bielska-Białej
+                </strong>
+                , dla których sport to nie tylko praca, ale styl życia.
+                Specjalizujemy się w{" "}
+                <strong className="text-zinc-300">treningach siłowych</strong>,{" "}
+                <strong className="text-zinc-300">treningu motorycznym</strong>{" "}
+                oraz{" "}
+                <strong className="text-zinc-300">
+                  przygotowaniu do zawodów
+                </strong>
+                . Łączymy kobiecą i męską perspektywę, aby dostarczyć Ci
+                kompleksowe wsparcie w drodze do lepszej wersji siebie.
               </p>
             </div>
-
             <div className="grid sm:grid-cols-2 gap-4">
-              {features.map((feature, index) => (
+              {FEATURES.map((feature, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-white shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 text-white shrink-0 mt-0.5" />
                   <span className="text-zinc-300 text-sm">{feature}</span>
                 </div>
               ))}
             </div>
 
             <div className="pt-4">
-              <button className="px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-zinc-200 transition-colors">
-                Czytaj więcej o nas
-              </button>
+              <a
+                href="#contact"
+                className="inline-block px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-zinc-200 transition-colors"
+              >
+                Umów bezpłatną konsultację
+              </a>
             </div>
           </div>
         </div>
