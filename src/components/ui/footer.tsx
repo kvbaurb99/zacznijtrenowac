@@ -1,42 +1,30 @@
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook } from "lucide-react";
 import Link from "next/link";
 
-const SOCIAL_LINKS = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  // { icon: Twitter, href: "#", label: "Twitter" },
-  // { icon: Linkedin, href: "#", label: "LinkedIn" },
-];
+const SOCIAL_LINKS = [{ icon: Facebook, href: "#", label: "Facebook" }];
 
 const FOOTER_LINKS = [
   {
-    title: "Nawigacja",
-    links: [
-      { label: "O nas", href: "#about" },
-      { label: "Przemiany", href: "#transformations" },
-      { label: "Kontakt", href: "#contact" },
-    ],
+    title: "Strony",
+    links: [{ label: "Blog", href: "/blog" }],
   },
   {
-    title: "Oferta",
+    title: "Trenerzy",
     links: [
-      { label: "Trening personalny", href: "#" },
-      { label: "Plany dietetyczne", href: "#" },
-      { label: "Konsultacje online", href: "#" },
+      { label: "Dariusz Sklarczyk", href: "/trenerzy/dariusz-sklarczyk" },
+      {
+        label: "Asia Rozmus-Sklarczyk",
+        href: "/trenerzy/asia-rozmus-sklarczyk",
+      },
     ],
   },
   {
     title: "Prawne",
-    links: [
-      { label: "Polityka prywatności", href: "#" },
-      { label: "Regulamin", href: "#" },
-    ],
+    links: [{ label: "Polityka prywatności", href: "#" }],
   },
 ];
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-black border-t border-zinc-800 text-zinc-400 py-12 sm:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

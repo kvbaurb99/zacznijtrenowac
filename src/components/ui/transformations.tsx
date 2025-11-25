@@ -2,7 +2,7 @@
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { memo, useMemo } from "react";
-import { useSlider } from "@/hooks/use-slider";
+import { useSlider } from "@/src/hooks/use-slider";
 
 interface Transformation {
   id: number;

@@ -1,0 +1,120 @@
+import type { Metadata } from "next";
+
+export const siteMetadata: Metadata = {
+  // Primary Title - max 60 characters, includes main keyword + brand
+  title: {
+    default: "Trener Personalny Bielsko-Biała | Zacznij Trenować",
+    template: "%s | Zacznij Trenować - Trener Personalny Bielsko-Biała",
+  },
+
+  // Meta Description - max 155-160 characters, includes CTA + keywords
+  description:
+    "Dariusz i Asia Sklarczyk - certyfikowani trenerzy personalni w Bielsku-Białej. Treningi siłowe, motoryczne, przygotowanie do zawodów i indywidualne plany dietetyczne. Umów bezpłatną konsultację!",
+
+  // Keywords - organized by priority and search intent
+  keywords: [
+    // Primary (high search volume, high intent)
+    "trener personalny Bielsko-Biała",
+    "trening personalny Bielsko-Biała",
+    "personal trainer Bielsko-Biała",
+
+    // Location variants
+    "trener personalny Śląsk",
+    "trener personalny województwo śląskie",
+    "trening personalny Śląskie",
+
+    // Service-specific
+    "treningi siłowe Bielsko-Biała",
+    "trening motoryczny Bielsko-Biała",
+    "trening funkcjonalny Bielsko-Biała",
+    "przygotowanie do zawodów Bielsko-Biała",
+    "dieta treningowa Bielsko-Biała",
+    "plan dietetyczny Bielsko-Biała",
+    "układanie diety Bielsko-Biała",
+
+    // Long-tail (lower competition, higher conversion)
+    "najlepszy trener personalny Bielsko-Biała",
+    "treningi personalne dla kobiet Bielsko-Biała",
+    "treningi personalne dla mężczyzn Bielsko-Biała",
+    "trener personalny dla par Bielsko-Biała",
+    "przygotowanie do zawodów fitness Śląsk",
+    "redukcja masy ciała Bielsko-Biała",
+    "budowa masy mięśniowej Bielsko-Biała",
+
+    // Brand keywords
+    "Dariusz Sklarczyk trener",
+    "Asia Sklarczyk trener",
+    "Zacznij Trenować",
+  ],
+
+  // Authors - important for E-E-A-T (Experience, Expertise, Authority, Trust)
+  authors: [
+    { name: "Dariusz Sklarczyk", url: "https://zacznijtrenowac.pl" },
+    { name: "Asia Sklarczyk", url: "https://zacznijtrenowac.pl" },
+  ],
+  creator: "Zacznij Trenować",
+  publisher: "Zacznij Trenować",
+
+  // Robots
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  // Open Graph (Facebook, LinkedIn)
+  openGraph: {
+    type: "website",
+    locale: "pl_PL",
+    url: "https://zacznijtrenowac.pl",
+    siteName: "Zacznij Trenować",
+    title: "Trener Personalny Bielsko-Biała | Dariusz i Asia Sklarczyk",
+    description:
+      "Profesjonalne treningi personalne w Bielsku-Białej. Treningi siłowe, motoryczne, przygotowanie do zawodów i plany dietetyczne. Zaufaj doświadczeniu!",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zacznij Trenować - Trenerzy Personalni Bielsko-Biała",
+      },
+    ],
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    title: "Trener Personalny Bielsko-Biała | Zacznij Trenować",
+    description:
+      "Dariusz i Asia Sklarczyk - certyfikowani trenerzy personalni. Treningi siłowe, motoryczne i plany dietetyczne w Bielsku-Białej.",
+    images: ["/og-image.jpg"],
+  },
+
+  // Verification (uzupełnij po rejestracji)
+  verification: {
+    google: "your-google-verification-code",
+  },
+
+  // Alternates - canonical URL
+  alternates: {
+    canonical: "https://zacznijtrenowac.pl",
+  },
+
+  // Category
+  category: "fitness",
+
+  // Other
+  metadataBase: new URL("https://zacznijtrenowac.pl"),
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
+};
+

@@ -11,7 +11,6 @@ export function Hero() {
     const video = videoRef.current;
     if (!video) return;
 
-    // Preload video metadata for faster initial paint
     video.preload = "metadata";
 
     const handleCanPlay = () => {
@@ -20,7 +19,6 @@ export function Hero() {
 
     video.addEventListener("canplay", handleCanPlay);
 
-    // Start loading video immediately since it's above the fold
     video.load();
 
     return () => {
@@ -30,14 +28,12 @@ export function Hero() {
 
   return (
     <header className="relative w-full h-[720px] overflow-hidden">
-      {/* Placeholder background while video loads */}
       <div
         className={`absolute inset-0 bg-zinc-950 transition-opacity duration-700 ${
           isVideoLoaded ? "opacity-0" : "opacity-100"
         }`}
       />
 
-      {/* Video Background */}
       <video
         ref={videoRef}
         className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${
@@ -52,10 +48,8 @@ export function Hero() {
         Twoja przeglądarka nie obsługuje odtwarzacza wideo.
       </video>
 
-      {/* Dark Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10" />
 
-      {/* Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4 sm:px-8 max-w-5xl mx-auto gap-8 pt-20">
         <div className="flex flex-col gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000">
           <h1 className="text-5xl sm:text-7xl md:text-5xl font-bold tracking-tight text-white">
@@ -88,7 +82,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
         <div className="w-[30px] h-[50px] rounded-3xl border-2 border-white/30 flex justify-center p-2">
           <div className="w-1 h-3 bg-white rounded-full" />
