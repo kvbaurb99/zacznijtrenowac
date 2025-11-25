@@ -1,17 +1,14 @@
 import type { Metadata } from "next";
 
 export const siteMetadata: Metadata = {
-  // Primary Title - max 60 characters, includes main keyword + brand
   title: {
     default: "Treningi Personalne Bielsko-Biała | Zacznij Trenować",
     template: "",
   },
 
-  // Meta Description - max 155-160 characters, includes CTA + keywords
   description:
     "Dariusz i Asia Sklarczyk - certyfikowani trenerzy personalni w Bielsku-Białej. Treningi siłowe, motoryczne, przygotowanie do zawodów i indywidualne plany dietetyczne. Umów bezpłatną konsultację!",
 
-  // Keywords - organized by priority and search intent
   keywords: [
     // Primary (high search volume, high intent)
     "trener personalny Bielsko-Biała",
@@ -47,7 +44,6 @@ export const siteMetadata: Metadata = {
     "Zacznij Trenować",
   ],
 
-  // Authors - important for E-E-A-T (Experience, Expertise, Authority, Trust)
   authors: [
     { name: "Dariusz Sklarczyk", url: "https://zacznijtrenowac.pl" },
     { name: "Asia Sklarczyk", url: "https://zacznijtrenowac.pl" },
@@ -55,7 +51,6 @@ export const siteMetadata: Metadata = {
   creator: "Zacznij Trenować",
   publisher: "Zacznij Trenować",
 
-  // Robots
   robots: {
     index: false,
     follow: false,
@@ -68,7 +63,6 @@ export const siteMetadata: Metadata = {
     },
   },
 
-  // Open Graph (Facebook, LinkedIn)
   openGraph: {
     type: "website",
     locale: "pl_PL",
@@ -87,7 +81,6 @@ export const siteMetadata: Metadata = {
     ],
   },
 
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
     title: "Trener Personalny Bielsko-Biała | Zacznij Trenować",
@@ -96,20 +89,16 @@ export const siteMetadata: Metadata = {
     images: ["/og-image.jpg"],
   },
 
-  // Verification (uzupełnij po rejestracji)
   verification: {
     google: "your-google-verification-code",
   },
 
-  // Alternates - canonical URL
   alternates: {
     canonical: "https://zacznijtrenowac.pl",
   },
 
-  // Category
   category: "fitness",
 
-  // Other
   metadataBase: new URL("https://zacznijtrenowac.pl"),
   formatDetection: {
     email: true,
@@ -117,4 +106,3 @@ export const siteMetadata: Metadata = {
     telephone: true,
   },
 };
-
