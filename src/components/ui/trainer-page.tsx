@@ -107,6 +107,7 @@ export function TrainerPage({
 
                 <Image
                   src={image}
+                  fetchPriority="high"
                   alt={`${name} - Trener Personalny`}
                   fill
                   className="object-cover z-0"
