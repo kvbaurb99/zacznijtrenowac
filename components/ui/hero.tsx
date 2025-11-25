@@ -72,12 +72,14 @@ export function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200">
           <Link
+            prefetch={false}
             href="#offer"
             className="px-8 py-4 rounded-full bg-white text-black font-semibold text-base hover:bg-zinc-200 transition-all transform hover:scale-105"
           >
             Sprawdź ofertę
           </Link>
           <Link
+            prefetch={false}
             href="#contact"
             className="px-8 py-4 rounded-full border border-white/20 bg-white/10 text-white font-semibold text-base backdrop-blur-sm hover:bg-white/20 transition-all"
           >

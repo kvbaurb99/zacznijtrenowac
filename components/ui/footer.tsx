@@ -43,7 +43,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand & Socials */}
           <div className="space-y-6">
-            <Link href="/" className="inline-block">
+            <Link prefetch={false} href="/" className="inline-block">
               <h2 className="text-2xl font-bold text-white">
                 Zacznij<span className="text-zinc-500">Trenowac</span>
               </h2>
@@ -74,6 +74,7 @@ export function Footer() {
                 {column.links.map((link) => (
                   <li key={link.label}>
                     <Link
+                      prefetch={false}
                       href={link.href}
                       className="text-sm hover:text-white transition-colors"
                     >
