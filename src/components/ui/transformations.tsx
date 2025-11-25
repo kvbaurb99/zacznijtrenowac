@@ -166,7 +166,7 @@ export function Transformations() {
   return (
     <section
       id="transformations"
-      className="pt-24 pb-16 bg-black text-white relative overflow-hidden"
+      className="py-16 bg-black text-white relative overflow-hidden"
     >
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-zinc-900 via-black to-black opacity-50" />

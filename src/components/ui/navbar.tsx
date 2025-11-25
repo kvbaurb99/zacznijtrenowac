@@ -18,10 +18,10 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "O nas", href: "#about" },
-    { name: "Metamorfozy", href: "#transformations" },
+    { name: "O nas", href: "/#about" },
+    { name: "Metamorfozy", href: "/#transformations" },
     { name: "Blog", href: "/blog" },
-    { name: "Kontakt", href: "#contact" },
+    { name: "Kontakt", href: "/#contact" },
   ];
 
   const trainers = [

@@ -38,7 +38,7 @@ export default function BlogPage() {
               Blog
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Poradnik <span className="text-zinc-400">Treningowy</span>
+              Aktualności <span className="text-zinc-400">Treningowe</span>
             </h1>
             <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
               Odkryj praktyczne porady, wskazówki i inspiracje od doświadczonych
@@ -50,7 +50,7 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-16 bg-black">
+      <section className="pb-16 pt-10 bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
