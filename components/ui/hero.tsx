@@ -47,8 +47,6 @@ export function Hero() {
         loop
         muted
         playsInline
-        // Poster for immediate visual feedback
-        poster="/video-poster.jpg"
       >
         <source src="/hero_video.mp4" type="video/mp4" />
         Twoja przeglądarka nie obsługuje odtwarzacza wideo.
