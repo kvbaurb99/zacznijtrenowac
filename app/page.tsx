@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import { Hero } from "@/src/components/ui/hero";
 import SectionSkeleton from "@/src/components/ui/section-skeleton";
@@ -33,15 +32,9 @@ export default function Home() {
   return (
     <main className="flex flex-col min-h-screen font-(family-name:--font-geist-sans)">
       <Hero />
-      <Suspense fallback={<SectionSkeleton />}>
-        <About />
-      </Suspense>
-      <Suspense fallback={<SectionSkeleton />}>
-        <Transformations />
-      </Suspense>
-      <Suspense fallback={<SectionSkeleton />}>
-        <Contact />
-      </Suspense>
+      <About />
+      <Transformations />
+      <Contact />
     </main>
   );
 }

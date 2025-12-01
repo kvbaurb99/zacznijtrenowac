@@ -81,3 +81,49 @@ a[href^="#"] {
 a[href^="#"]:hover {
   @apply text-white;
 }
+
+/* Trainer description styles */
+.trainer-description {
+  @apply text-base md:text-lg text-zinc-300 leading-relaxed;
+}
+
+.trainer-description p {
+  @apply mb-6 text-zinc-300 leading-relaxed;
+}
+
+.trainer-description p:first-child {
+  @apply text-xl text-white font-medium mb-6;
+}
+
+.trainer-description p:last-child {
+  @apply mb-0;
+}
+
+.trainer-description ul,
+.trainer-description ol {
+  @apply my-6 ml-6 space-y-3;
+}
+
+.trainer-description ul {
+  @apply list-disc;
+}
+
+.trainer-description ol {
+  @apply list-decimal;
+}
+
+.trainer-description li {
+  @apply mb-3 text-zinc-300 leading-relaxed;
+}
+
+.trainer-description li::marker {
+  @apply text-zinc-500;
+}
+
+.trainer-description strong {
+  @apply text-white font-semibold;
+}
+
+.trainer-description br {
+  @apply block h-2;
+}

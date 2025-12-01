@@ -20,7 +20,7 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body
-        className={`${fontVariables} antialiased min-h-screen bg-zinc-950 text-zinc-100 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-zinc-900 via-zinc-950 to-black selection:bg-white/20`}
+        className={`${fontVariables} antialiased min-h-screen bg-zinc-950 text-zinc-100 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-zinc-900 via-zinc-950 to-black selection:bg-white/20 overflow-x-hidden`}
       >
         <Navbar />
         {children}
