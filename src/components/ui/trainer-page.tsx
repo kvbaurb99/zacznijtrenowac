@@ -43,7 +43,7 @@ export function TrainerPage({
   transformations,
 }: TrainerPageProps) {
   return (
-    <div className="min-h-screen bg-[#050505] text-white selection:bg-white/20">
+    <main className="min-h-screen bg-[#050505] text-white selection:bg-white/20">
       <TrainerHero
         name={name}
         description={description}
@@ -56,6 +56,6 @@ export function TrainerPage({
       <TrainerTransformations transformations={transformations} />
       <TrainerLocations locations={locations} />
       <TrainerCTA ctaText={ctaText} phoneHref={phoneHref} />
-    </div>
+    </main>
   );
 }
