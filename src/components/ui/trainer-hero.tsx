@@ -19,7 +19,7 @@ export function TrainerHero({
   image,
 }: TrainerHeroProps) {
   return (
-    <section className="relative min-h-screen pt-32 pb-20">
+    <section className="relative min-h-screen pt-36 pb-20">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Gradient Orbs */}
@@ -42,7 +42,7 @@ export function TrainerHero({
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 relative lg:grid-cols-12 gap-16 lg:gap-8 items-start">
           {/* Image Column */}
-          <div className="lg:col-span-5 sticky top-24">
+          <div className="lg:col-span-5 lg:sticky top-32">
             <div className="relative group">
               {/* Glow Effect */}
               <div className="absolute -inset-4 rounded-3xl bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-2xl" />

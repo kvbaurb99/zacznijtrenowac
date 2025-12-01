@@ -51,7 +51,8 @@ export function Navbar() {
             fetchPriority="high"
             src={ImageLogo}
             alt="Zacznij Trenować Bielsko-Biała"
-            width={100}
+            width={90}
+            className="hover:scale-95 duration-150"
             height={100}
           />
         </Link>
