@@ -61,6 +61,7 @@ export function TrainerHero({
                   src={image}
                   alt={`${name} - Trener Personalny`}
                   fill
+                  fetchPriority="high"
                   className="object-cover transition-transform duration-700 rounded-xl"
                   priority
                   sizes="(max-width: 768px) 100vw, 40vw"
@@ -159,4 +160,3 @@ export function TrainerHero({
     </section>
   );
 }
-
