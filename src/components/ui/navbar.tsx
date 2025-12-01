@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Dumbbell, ChevronDown } from "lucide-react";
+import ImageLogo from "@/src/logo.svg";
+import Image from "next/image";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,12 +46,14 @@ export function Navbar() {
           href="/"
           className="flex items-center gap-2 group"
         >
-          <div className="p-2 bg-white rounded-full text-black group-hover:scale-110 transition-transform duration-300">
-            <Dumbbell size={20} strokeWidth={2.5} />
-          </div>
-          <span className="text-xl font-bold tracking-tight text-white">
-            Zacznij<span className="text-zinc-400">Trenować</span>
-          </span>
+          <Image
+            priority
+            fetchPriority="high"
+            src={ImageLogo}
+            alt="Zacznij Trenować Bielsko-Biała"
+            width={100}
+            height={100}
+          />
         </Link>
 
         {/* Desktop Menu */}
