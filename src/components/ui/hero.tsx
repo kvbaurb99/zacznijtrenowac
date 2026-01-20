@@ -116,9 +116,10 @@ export function Hero() {
                   <div className="relative h-full min-h-[480px] lg:min-h-[580px]">
                     <Image
                       src={HeroImage}
-                      alt="Trenerzy Personalni"
+                      alt="Dariusz Sklarczyk Asia Rozmus-Sklarczyk Trener Personalny Bielsko-Biała"
                       fill
                       priority
+                      fetchPriority="high"
                       className="object-cover object-top"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-zinc-950/60 via-transparent to-transparent" />
@@ -130,8 +131,9 @@ export function Hero() {
                   <div className="relative h-[235px] lg:h-[285px]">
                     <Image
                       src={HeroImage2}
-                      alt="Trening personalny"
+                      alt="Asia Rozmus-Sklarczyk Trener Personalny Bielsko-Biała - Zdjęcie drugie"
                       fill
+                      fetchPriority="high"
                       className="object-cover object-center"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-zinc-950/50 via-transparent to-transparent" />
@@ -143,7 +145,8 @@ export function Hero() {
                   <div className="relative h-[235px] lg:h-[285px]">
                     <Image
                       src={HeroImage3}
-                      alt="Metamorfoza"
+                      alt="Asia Rozmus-Sklarczyk Trener Personalny Bielsko-Biała - Zdjęcie trzecie"
+                      fetchPriority="high"
                       fill
                       className="object-cover object-bottom"
                     />
