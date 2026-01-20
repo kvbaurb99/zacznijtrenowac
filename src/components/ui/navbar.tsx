@@ -22,7 +22,7 @@ export function Navbar() {
   const navLinks = [
     { name: "O nas", href: "/#about" },
     { name: "Metamorfozy", href: "/#transformations" },
-    { name: "Blog", href: "/blog" },
+    { name: "Vouchery", href: "/#vouchers" },
     { name: "Kontakt", href: "/#contact" },
   ];
 
