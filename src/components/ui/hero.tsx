@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { Dumbbell, Target, TrendingUp } from "lucide-react";
@@ -12,38 +11,24 @@ export function Hero() {
     <header className="relative min-h-screen bg-zinc-950 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0">
-        {/* Subtle gradient orbs */}
-        <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-zinc-800/10 rounded-full blur-[120px]" />
-        <div className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-zinc-800/8 rounded-full blur-[100px]" />
-        <div className="absolute bottom-0 left-1/3 w-[350px] h-[350px] bg-zinc-700/8 rounded-full blur-[100px]" />
-
-        {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-size-[80px_80px]" />
-
         {/* Diagonal lines decoration */}
         <div className="absolute top-0 right-0 w-1/2 h-full overflow-hidden opacity-[0.03]">
           <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,#fff_0px,#fff_1px,transparent_1px,transparent_80px)]" />
         </div>
       </div>
 
-      {/* Floating decorative elements */}
-      <div className="absolute top-32 left-[10%] w-2 h-2 bg-zinc-600 rounded-full hidden lg:block" />
-      <div className="absolute top-48 left-[15%] w-1 h-1 bg-zinc-700 rounded-full hidden lg:block" />
-      <div className="absolute bottom-32 left-[8%] w-3 h-3 border border-zinc-800 rounded-full hidden lg:block" />
-      <div className="absolute top-1/2 right-[5%] w-20 h-20 border border-zinc-800/30 rounded-full hidden xl:block" />
-      <div className="absolute bottom-40 right-[12%] w-1.5 h-1.5 bg-zinc-600 rounded-full hidden lg:block" />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-8 min-h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 lg:gap-26 w-full max-w-[1400px] mx-auto">
 
           {/* Content */}
           <div className="lg:col-span-6 order-2 lg:order-1 relative">
-            {/* Subtle gradient background */}
-            <div className="absolute -inset-8 bg-linear-to-br from-zinc-800/10 via-transparent to-zinc-700/5 rounded-3xl blur-2xl hidden lg:block" />
-            <div className="absolute -top-16 -left-16 w-32 h-32 bg-zinc-700/10 rounded-full blur-3xl hidden lg:block" />
-            <div className="absolute bottom-0 right-0 w-48 h-48 bg-zinc-800/8 rounded-full blur-3xl hidden lg:block" />
-            <div className="absolute -bottom-12 -left-12 w-40 h-40 bg-zinc-700/12 rounded-full blur-3xl hidden lg:block" />
-
+            {/* Gradient background */}
+            <div className="absolute -inset-8 bg-linear-to-b from-zinc-700/8 via-transparent to-zinc-700/6 rounded-3xl blur-2xl hidden lg:block" />
+            <div className="absolute -top-20 left-0 right-0 h-48 bg-linear-to-b from-zinc-700/10 to-transparent blur-3xl hidden lg:block" />
+            <div className="absolute -bottom-16 left-0 right-0 h-40 bg-linear-to-t from-zinc-700/8 to-transparent blur-3xl hidden lg:block" />
+            <div className="absolute -top-12 -left-12 w-48 h-48 bg-zinc-600/6 rounded-full blur-3xl hidden lg:block" />
+            <div className="absolute -bottom-12 -right-8 w-56 h-56 bg-zinc-700/8 rounded-full blur-3xl hidden lg:block" />
             <div className="relative">
               {/* Heading */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] mb-6">
