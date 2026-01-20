@@ -54,9 +54,9 @@ export function About() {
               <div className="relative aspect-3/4 w-full max-w-md mx-auto rounded-2xl overflow-hidden border border-zinc-800/50 shadow-2xl shadow-black/50">
                 <Image
                   src={AboutImage}
-                  priority
                   alt="Dariusz Sklarczyk i Asia Rozmus-Sklarczyk - Trenerzy Personalni Bielsko-Biała"
                   fill
+                  sizes="(max-width: 768px) 100vw, 500px"
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
 

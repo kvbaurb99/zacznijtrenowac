@@ -105,6 +105,7 @@ export function Hero() {
                       fill
                       priority
                       fetchPriority="high"
+                      sizes="(max-width: 768px) 100vw, 400px"
                       className="object-cover object-top"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-zinc-950/60 via-transparent to-transparent" />
@@ -118,7 +119,7 @@ export function Hero() {
                       src={HeroImage2}
                       alt="Asia Rozmus-Sklarczyk Trener Personalny Bielsko-Biała - Zdjęcie drugie"
                       fill
-                      fetchPriority="high"
+                      sizes="(max-width: 768px) 50vw, 200px"
                       className="object-cover object-center"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-zinc-950/50 via-transparent to-transparent" />
@@ -131,8 +132,8 @@ export function Hero() {
                     <Image
                       src={HeroImage3}
                       alt="Asia Rozmus-Sklarczyk Trener Personalny Bielsko-Biała - Zdjęcie trzecie"
-                      fetchPriority="high"
                       fill
+                      sizes="(max-width: 768px) 50vw, 200px"
                       className="object-cover object-bottom"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-zinc-950/50 via-transparent to-transparent" />
