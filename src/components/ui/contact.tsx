@@ -5,14 +5,12 @@ import { useState } from "react";
 
 const TRAINERS = [
   {
-    name: "Darek",
-    role: "Trener Personalny",
+    name: "Darek Sklarczyk",
     phone: "600 851 174",
     email: "darektrener@icloud.com",
   },
   {
-    name: "Asia",
-    role: "Trener Personalny",
+    name: "Asia Rozmus-Sklarczyk",
     phone: "518 989 721",
     email: "asiatrener@icloud.com",
   },
@@ -76,12 +74,9 @@ export function Contact() {
                   key={trainer.name}
                   className="p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800/50 hover:border-zinc-700 transition-all duration-300"
                 >
-                  <h4 className="text-xl font-bold text-white mb-1">
+                  <h4 className="text-xl font-bold text-white mb-6">
                     {trainer.name}
                   </h4>
-                  <p className="text-zinc-500 text-sm uppercase tracking-wider mb-6">
-                    {trainer.role}
-                  </p>
 
                   <div className="space-y-4">
                     <a

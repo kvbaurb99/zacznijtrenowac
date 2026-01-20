@@ -9,41 +9,6 @@ export const siteMetadata: Metadata = {
   description:
     "Dariusz i Asia Sklarczyk - certyfikowani trenerzy personalni w Bielsku-Białej. Treningi siłowe, motoryczne, przygotowanie do zawodów i indywidualne plany dietetyczne. Umów bezpłatną konsultację!",
 
-  keywords: [
-    // Primary (high search volume, high intent)
-    "trener personalny Bielsko-Biała",
-    "trening personalny Bielsko-Biała",
-    "personal trainer Bielsko-Biała",
-
-    // Location variants
-    "trener personalny Śląsk",
-    "trener personalny województwo śląskie",
-    "trening personalny Śląskie",
-
-    // Service-specific
-    "treningi siłowe Bielsko-Biała",
-    "trening motoryczny Bielsko-Biała",
-    "trening funkcjonalny Bielsko-Biała",
-    "przygotowanie do zawodów Bielsko-Biała",
-    "dieta treningowa Bielsko-Biała",
-    "plan dietetyczny Bielsko-Biała",
-    "układanie diety Bielsko-Biała",
-
-    // Long-tail (lower competition, higher conversion)
-    "najlepszy trener personalny Bielsko-Biała",
-    "treningi personalne dla kobiet Bielsko-Biała",
-    "treningi personalne dla mężczyzn Bielsko-Biała",
-    "trener personalny dla par Bielsko-Biała",
-    "przygotowanie do zawodów fitness Śląsk",
-    "redukcja masy ciała Bielsko-Biała",
-    "budowa masy mięśniowej Bielsko-Biała",
-
-    // Brand keywords
-    "Dariusz Sklarczyk trener",
-    "Asia Sklarczyk trener",
-    "Zacznij Trenować",
-  ],
-
   authors: [
     { name: "Dariusz Sklarczyk", url: "https://zacznijtrenowac.pl" },
     { name: "Asia Sklarczyk", url: "https://zacznijtrenowac.pl" },

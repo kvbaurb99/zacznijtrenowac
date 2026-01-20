@@ -4,49 +4,15 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
 
-    video.preload = "metadata";
 
-    const handleCanPlay = () => {
-      setIsVideoLoaded(true);
-    };
-
-    video.addEventListener("canplay", handleCanPlay);
-
-    video.load();
-
-    return () => {
-      video.removeEventListener("canplay", handleCanPlay);
-    };
-  }, []);
 
   return (
     <header className="relative w-full h-[720px] overflow-hidden">
       <div
-        className={`absolute inset-0 bg-zinc-950 transition-opacity duration-700 ${
-          isVideoLoaded ? "opacity-0" : "opacity-100"
-        }`}
+        className="absolute inset-0 bg-zinc-950"
       />
-
-      <video
-        ref={videoRef}
-        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-700 ${
-          isVideoLoaded ? "opacity-100" : "opacity-0"
-        }`}
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="/hero_video.mp4" type="video/mp4" />
-        Twoja przeglądarka nie obsługuje odtwarzacza wideo.
-      </video>
 
       <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10" />
 
