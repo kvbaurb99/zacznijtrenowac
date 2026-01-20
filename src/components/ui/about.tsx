@@ -1,5 +1,5 @@
 import { Dumbbell, UtensilsCrossed, Pill, ArrowRight } from "lucide-react";
-import AboutImage from "@/assets/test.jpeg";
+import AboutImage from "@/assets/IMG_6116.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
