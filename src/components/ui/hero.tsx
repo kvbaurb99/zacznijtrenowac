@@ -3,9 +3,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Dumbbell, Target, TrendingUp } from "lucide-react";
-import HeroImage from "@/assets/test.jpeg";
-import HeroImage2 from '@/assets/IMG_4036.jpg'
-import HeroImage3 from '@/assets/asiadarek.jpg'
+import HeroImage from "@/assets/hero/test.webp";
+import HeroImage2 from '@/assets/hero/IMG_4036.webp'
+import HeroImage3 from '@/assets/hero/asiadarek.webp'
 
 export function Hero() {
   return (
