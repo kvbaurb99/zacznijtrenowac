@@ -74,7 +74,7 @@ export function Hero() {
         .delay-600 { animation-delay: 0.6s; }
       `}</style>
 
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-36 sm:pt-24 lg:pt-28 pb-6 sm:pb-8 min-h-screen flex items-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-24 lg:pt-28 pb-6 sm:pb-8 min-h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-6 sm:gap-8 lg:gap-16 xl:gap-20 w-full max-w-[1400px] mx-auto">
 
           {/* Content */}
