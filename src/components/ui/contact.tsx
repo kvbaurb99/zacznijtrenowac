@@ -50,7 +50,7 @@ export function Contact() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Rozpocznij współpracę
           </h2>
-          <p className="text-zinc-400 max-w-2xl text-lg">
+          <p className="text-zinc-400 max-w-2xl text-base md:text-lg">
             Masz pytania? Chcesz umówić się na trening? Wypełnij formularz lub
             skontaktuj się bezpośrednio z nami.
           </p>
@@ -60,8 +60,8 @@ export function Contact() {
           {/* Lewa kolumna - Dane kontaktowe */}
           <div className="space-y-8">
             <div className="prose prose-invert">
-              <h3 className="text-2xl font-bold mb-6">Bezpośredni kontakt</h3>
-              <p className="text-zinc-400 mb-8 leading-relaxed">
+              <h3 className="text-xl md:text-2xl font-bold mb-6">Bezpośredni kontakt</h3>
+              <p className="text-zinc-400 mb-8 leading-relaxed text-sm md:text-base">
                 Wybierz trenera, z którym chcesz pracować, i zadzwoń lub napisz
                 bezpośrednio. Jesteśmy dostępni, aby odpowiedzieć na Twoje
                 pytania i pomóc Ci dobrać odpowiedni plan treningowy.
@@ -74,7 +74,7 @@ export function Contact() {
                   key={trainer.name}
                   className="p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800/50 hover:border-zinc-700 transition-all duration-300"
                 >
-                  <h4 className="text-xl font-bold text-white mb-6">
+                  <h4 className="text-lg md:text-xl font-bold text-white mb-6">
                     {trainer.name}
                   </h4>
 
@@ -106,7 +106,7 @@ export function Contact() {
 
           {/* Prawa kolumna - Formularz */}
           <div className="bg-zinc-900/20 border border-zinc-800/50 rounded-3xl p-6 sm:p-8 lg:p-10 backdrop-blur-sm h-fit">
-            <h3 className="text-2xl font-bold mb-6">Napisz do nas</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-6">Napisz do nas</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -175,7 +175,7 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-zinc-200 transition-colors flex items-center justify-center group disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-zinc-200 transition-colors flex items-center justify-center group disabled:opacity-70 disabled:cursor-not-allowed text-sm md:text-base"
               >
                 {isSubmitting ? (
                   "Wysyłanie..."

@@ -138,8 +138,8 @@ export function About() {
               </div>
 
               {/* Description */}
-              <div className="space-y-4 text-zinc-300 leading-relaxed text-base md:text-lg">
-                <p className="text-base md:text-lg text-zinc-300">
+              <div className="space-y-4 text-zinc-400 leading-relaxed text-base md:text-lg">
+                <p className="text-base md:text-lg text-zinc-400">
                   Poznaliśmy się na siłowni — w miejscu, gdzie rodzi się siła, determinacja
                   i walka o lepszą wersję siebie. Nie wiedzieliśmy wtedy, że oprócz mięśni
                   i kondycji zbudujemy coś znacznie ważniejszego. Z treningu na trening,

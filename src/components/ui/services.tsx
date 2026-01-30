@@ -84,7 +84,7 @@ export function Services() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 lg:mb-20">
-          <span className="inline-block px-4 py-1.5 rounded-full border border-zinc-700/50 bg-zinc-900/60 text-zinc-400 text-sm mb-4 tracking-wide uppercase backdrop-blur-sm">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs md:text-sm border border-zinc-700/50 bg-zinc-900/60 text-zinc-400 mb-4 tracking-wide uppercase backdrop-blur-sm">
             Oferta
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -96,7 +96,7 @@ export function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
           {SERVICES.map((service, index) => (
             <div
               key={index}

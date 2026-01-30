@@ -33,7 +33,7 @@ export function Vouchers() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-14 lg:mb-20">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-zinc-700/50 bg-zinc-900/60 text-zinc-400 text-sm mb-4 tracking-wide uppercase backdrop-blur-sm">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs md:text-sm border border-zinc-700/50 bg-zinc-900/60 text-zinc-400 mb-4 tracking-wide uppercase backdrop-blur-sm">
             <Gift className="w-4 h-4" />
             Prezent
           </span>
@@ -46,30 +46,27 @@ export function Vouchers() {
         </div>
 
         {/* Layout: text left (no frame), images right – creative collage */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-28 xl:gap-32 items-center max-w-[1400px] mx-auto">
-          {/* Left: Tekst – szersza kolumna z tłem */}
-          <div className="lg:col-span-6 order-2 lg:order-1 relative rounded-2xl bg-white/[0.04] border border-white/[0.06] p-6 sm:p-8 lg:p-10 backdrop-blur-sm">
-            <div className="absolute inset-0 rounded-2xl bg-[linear-gradient(135deg,rgba(255,255,255,0.06)_0%,transparent_50%)] pointer-events-none" />
-            <div className="relative space-y-8">
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">
-                Idealny prezent na każdą okazję
-              </h3>
-              <div className="space-y-6 text-zinc-400 text-base sm:text-lg leading-relaxed">
-                <p>
-                  Voucher na trening personalny to sposób na to, by ktoś bliski zaczął dbać o siebie pod okiem profesjonalistów. Sprawdzi się jako prezent urodzinowy, świąteczny lub z okazji Dnia Matki czy Ojca.
-                </p>
-                <p>
-                  Oferujemy vouchery na pojedyncze treningi oraz pakiety — dopasujemy formę do Twoich oczekiwań i budżetu. Wystarczy się skontaktować, a przygotujemy dla Ciebie indywidualną ofertę.
-                </p>
-              </div>
-              <Link
-                href="#contact"
-                className="group inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-white/10 text-white font-medium hover:bg-white/15 transition-all duration-300 hover:scale-[1.02]"
-              >
-                Zapytaj o voucher
-                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-28 xl:gap-32 items-center max-w-[1400px] mx-auto">
+          {/* Left: Tekst – bez tła */}
+          <div className="lg:col-span-6 order-2 lg:order-1 space-y-8">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">
+              Idealny prezent na każdą okazję
+            </h3>
+            <div className="space-y-6 text-zinc-400 text-base sm:text-lg leading-relaxed">
+              <p>
+                Voucher na trening personalny to sposób na to, by ktoś bliski zaczął dbać o siebie pod okiem profesjonalistów. Sprawdzi się jako prezent urodzinowy, świąteczny lub z okazji Dnia Matki czy Ojca.
+              </p>
+              <p>
+                Oferujemy vouchery na pojedyncze treningi oraz pakiety — dopasujemy formę do Twoich oczekiwań i budżetu. Wystarczy się skontaktować, a przygotujemy dla Ciebie indywidualną ofertę.
+              </p>
             </div>
+            <Link
+              href="#contact"
+              className="group inline-flex text-sm md:text-base items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-white/10 text-white font-medium hover:bg-white/15 transition-all duration-300 hover:scale-[1.02]"
+            >
+              Zapytaj o voucher
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
           </div>
 
           {/* Right: Kreatywna galeria – układ kaskadowy */}

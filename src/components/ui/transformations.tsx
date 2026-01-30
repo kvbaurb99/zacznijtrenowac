@@ -34,7 +34,7 @@ function TransformationCard({
   alt: string;
 }) {
   return (
-    <div className="group relative rounded-xl overflow-hidden cursor-pointer max-w-[320px] mx-auto md:max-w-none md:mx-0">
+    <div className="group relative rounded-xl overflow-hidden cursor-pointer w-full max-w-[100%] md:max-w-[320px] md:mx-auto lg:max-w-none lg:mx-0">
       {/* Jedno zdjęcie na kartę – zdjęcie już zawiera przed (lewa) i po (prawa) */}
       <div className="aspect-4/5 relative bg-zinc-900">
         <Image
@@ -142,6 +142,7 @@ export function Transformations() {
   } = useSlider({
     totalItems: TRANSFORMATIONS.length,
     breakpoints: SLIDER_BREAKPOINTS,
+    defaultItemsPerPage: 2,
   });
 
   return (
@@ -181,8 +182,8 @@ export function Transformations() {
           </p>
         </header>
 
-        {/* Slider – węższa sekcja w containerze */}
-        <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8">
+        {/* Slider – na mobile szerszy (mniejszy padding), w containerze */}
+        <div className="relative max-w-[1400px] mx-auto px-2 sm:px-4 md:px-8">
           <SliderNavButton direction="prev" onClick={prevSlide} />
           <SliderNavButton direction="next" onClick={nextSlide} />
 
@@ -194,7 +195,7 @@ export function Transformations() {
               {TRANSFORMATIONS.map((item, index) => (
                 <div
                   key={item.id}
-                  className="w-full md:w-1/2 lg:w-1/3 shrink-0 p-2"
+                  className="w-1/2 lg:w-1/3 shrink-0 p-1 sm:p-2"
                 >
                   <TransformationCard index={index} src={item.src} alt={item.alt} />
                 </div>
@@ -213,7 +214,7 @@ export function Transformations() {
         <div className="mt-14 text-center">
           <a
             href="#contact"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-white text-zinc-950 font-semibold rounded-full hover:bg-zinc-100 transition-all duration-300 hover:shadow-lg hover:shadow-white/20 group"
+            className="inline-flex text-sm md:text-base items-center gap-3 px-8 py-4 bg-white text-zinc-950 font-semibold rounded-full hover:bg-zinc-100 transition-all duration-300 hover:shadow-lg hover:shadow-white/20 group"
           >
             Rozpocznij swoją przemianę
             <ChevronRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
