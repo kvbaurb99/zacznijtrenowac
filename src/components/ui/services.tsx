@@ -1,6 +1,5 @@
 "use client";
 
-import { useInView } from "react-intersection-observer";
 import {
   Dumbbell,
   Heart,
@@ -68,25 +67,15 @@ const SERVICES = [
 ] as const;
 
 export function Services() {
-  const { ref: headerRef, inView: headerInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
-  const { ref: gridRef, inView: gridInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.05,
-  });
-
   return (
     <section id="services" className="py-20 lg:py-28 bg-zinc-950 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-zinc-800/50 to-transparent" />
-      
+
       {/* Gradient orbs */}
       <div className="absolute top-1/4 -right-32 w-72 h-72 bg-zinc-800/20 rounded-full blur-[100px]" />
       <div className="absolute bottom-1/3 -left-32 w-64 h-64 bg-zinc-700/15 rounded-full blur-[80px]" />
-      
+
       {/* Grid pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -94,12 +83,7 @@ export function Services() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div
-          ref={headerRef}
-          className={`text-center mb-16 lg:mb-20 transition-all duration-1000 ease-out ${
-            headerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
+        <div className="text-center mb-16 lg:mb-20">
           <span className="inline-block px-4 py-1.5 rounded-full border border-zinc-700/50 bg-zinc-900/60 text-zinc-400 text-sm mb-4 tracking-wide uppercase backdrop-blur-sm">
             Oferta
           </span>
@@ -112,19 +96,11 @@ export function Services() {
         </div>
 
         {/* Services Grid */}
-        <div
-          ref={gridRef}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
           {SERVICES.map((service, index) => (
             <div
               key={index}
-              className={`group relative p-6 sm:p-7 rounded-2xl bg-zinc-900/40 border border-zinc-800/50 hover:border-zinc-700/80 transition-all duration-500 hover:bg-zinc-900/60 backdrop-blur-sm hover:scale-[1.02] ${
-                gridInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-              style={{
-                transitionDelay: gridInView ? `${index * 80}ms` : "0ms",
-              }}
+              className="group relative p-6 sm:p-7 rounded-2xl bg-zinc-900/40 border border-zinc-800/50 hover:border-zinc-700/80 transition-all duration-500 hover:bg-zinc-900/60 backdrop-blur-sm hover:scale-[1.02]"
             >
               {/* Glow effect on hover */}
               <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -175,11 +151,7 @@ export function Services() {
         </div>
 
         {/* Bottom CTA */}
-        <div
-          className={`mt-12 lg:mt-16 text-center transition-all duration-1000 ease-out delay-500 ${
-            gridInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-        >
+        <div className="mt-12 lg:mt-16 text-center">
           <p className="text-zinc-400 text-sm sm:text-base mb-4">
             Nie znalazłeś tego, czego szukasz?
           </p>

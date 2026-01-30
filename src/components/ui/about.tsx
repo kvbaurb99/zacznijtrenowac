@@ -25,11 +25,6 @@ const SERVICES = [
 ] as const;
 
 export function About() {
-  const { ref: imageRef, inView: imageInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
   const { ref: contentRef, inView: contentInView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -76,13 +71,7 @@ export function About() {
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center">
           {/* Image Column */}
-          <div
-            ref={imageRef}
-            className={`lg:col-span-5 relative transition-all duration-1000 ease-out ${imageInView
-              ? "opacity-100 translate-x-0"
-              : "opacity-0 -translate-x-12"
-              }`}
-          >
+          <div className="lg:col-span-5 relative">
             <div className="relative group">
               {/* Decorative frame */}
               <div className="absolute -inset-4 lg:-inset-6 bg-linear-to-br from-zinc-700/20 via-zinc-800/10 to-zinc-900/20 rounded-3xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-700" />

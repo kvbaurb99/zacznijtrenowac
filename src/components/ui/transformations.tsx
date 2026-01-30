@@ -1,8 +1,6 @@
 "use client";
-
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { memo, useMemo } from "react";
 import { useSlider } from "@/src/hooks/use-slider";
 
 import Img0 from "@/assets/transformations/image0.jpeg";
@@ -26,7 +24,7 @@ const SLIDER_BREAKPOINTS = [
   { width: 1024, itemsPerPage: 3 },
 ];
 
-const TransformationCard = memo(function TransformationCard({
+function TransformationCard({
   index,
   src,
   alt,
@@ -81,9 +79,9 @@ const TransformationCard = memo(function TransformationCard({
       </div>
     </div>
   );
-});
+}
 
-const SliderNavButton = memo(function SliderNavButton({
+function SliderNavButton({
   direction,
   onClick,
 }: {
@@ -103,9 +101,9 @@ const SliderNavButton = memo(function SliderNavButton({
       <Icon className="w-5 h-5 lg:w-6 lg:h-6" />
     </button>
   );
-});
+}
 
-const PaginationDots = memo(function PaginationDots({
+function PaginationDots({
   count,
   currentIndex,
   onDotClick,
@@ -114,7 +112,7 @@ const PaginationDots = memo(function PaginationDots({
   currentIndex: number;
   onDotClick: (index: number) => void;
 }) {
-  const dots = useMemo(() => Array.from({ length: count }), [count]);
+  const dots = Array.from({ length: count });
 
   return (
     <div className="mt-10 flex justify-center items-center gap-2">
@@ -131,7 +129,7 @@ const PaginationDots = memo(function PaginationDots({
       ))}
     </div>
   );
-});
+}
 
 export function Transformations() {
   const {

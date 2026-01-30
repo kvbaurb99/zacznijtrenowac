@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useInView } from "react-intersection-observer";
 import { Gift, ArrowRight } from "lucide-react";
 
 import Voucher1 from "@/assets/vouchers/1.jpeg";
@@ -14,16 +11,6 @@ const VOUCHERS = [
 ] as const;
 
 export function Vouchers() {
-  const { ref: headerRef, inView: headerInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
-  const { ref: contentRef, inView: contentInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   return (
     <section id="vouchers" className="py-20 lg:py-28 bg-zinc-950 relative overflow-hidden">
       {/* Gradient tło – w stronę bieli, bardzo przezroczysty */}
@@ -45,11 +32,7 @@ export function Vouchers() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div
-          ref={headerRef}
-          className={`text-center mb-14 lg:mb-20 transition-all duration-1000 ease-out ${headerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-        >
+        <div className="text-center mb-14 lg:mb-20">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-zinc-700/50 bg-zinc-900/60 text-zinc-400 text-sm mb-4 tracking-wide uppercase backdrop-blur-sm">
             <Gift className="w-4 h-4" />
             Prezent
@@ -63,11 +46,7 @@ export function Vouchers() {
         </div>
 
         {/* Layout: text left (no frame), images right – creative collage */}
-        <div
-          ref={contentRef}
-          className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-28 xl:gap-32 items-center max-w-[1400px] mx-auto transition-all duration-1000 ease-out ${contentInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-28 xl:gap-32 items-center max-w-[1400px] mx-auto">
           {/* Left: Tekst – szersza kolumna z tłem */}
           <div className="lg:col-span-6 order-2 lg:order-1 relative rounded-2xl bg-white/[0.04] border border-white/[0.06] p-6 sm:p-8 lg:p-10 backdrop-blur-sm">
             <div className="absolute inset-0 rounded-2xl bg-[linear-gradient(135deg,rgba(255,255,255,0.06)_0%,transparent_50%)] pointer-events-none" />
@@ -96,11 +75,7 @@ export function Vouchers() {
           {/* Right: Kreatywna galeria – układ kaskadowy */}
           <div className="lg:col-span-6 order-1 lg:order-2 relative w-full min-h-[360px] sm:min-h-[420px] lg:min-h-[460px]">
             {/* Główne zdjęcie – lekko w lewo, lekkie obrócenie */}
-            <div
-              className={`absolute left-0 top-0 w-[62%] sm:w-[60%] z-10 transition-all duration-700 ease-out ${contentInView ? "opacity-100 translate-x-0 translate-y-0" : "opacity-0 -translate-x-6 -translate-y-3"
-                }`}
-              style={{ transitionDelay: contentInView ? "200ms" : "0ms" }}
-            >
+            <div className="absolute left-0 top-0 w-[62%] sm:w-[60%] z-10">
               <div className="relative aspect-3/4 rounded-2xl overflow-hidden shadow-2xl shadow-black/40 -rotate-3 hover:rotate-0 transition-transform duration-500">
                 <Image
                   src={VOUCHERS[0].src}
@@ -114,11 +89,7 @@ export function Vouchers() {
             </div>
 
             {/* Drugie zdjęcie – nałożone z prawej, nachodzi na lewe, przeciwne obrócenie */}
-            <div
-              className={`absolute right-[8%] sm:right-[5%] top-1/4 w-[48%] sm:w-[46%] z-20 transition-all duration-700 ease-out ${contentInView ? "opacity-100 translate-x-0 translate-y-0" : "opacity-0 translate-x-6 translate-y-3"
-                }`}
-              style={{ transitionDelay: contentInView ? "400ms" : "0ms" }}
-            >
+            <div className="absolute right-[8%] sm:right-[5%] top-1/4 w-[48%] sm:w-[46%] z-20">
               <div className="relative aspect-3/4 rounded-2xl overflow-hidden shadow-2xl shadow-black/40 rotate-6 hover:rotate-3 transition-transform duration-500">
                 <Image
                   src={VOUCHERS[1].src}
