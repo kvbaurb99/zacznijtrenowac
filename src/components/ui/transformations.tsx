@@ -174,10 +174,10 @@ export function Transformations() {
             <span className="w-2 h-2 rounded-full bg-white" />
             Realne efekty
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
             Metamorfozy
           </h2>
-          <p className="text-zinc-400 max-w-xl mx-auto text-lg">
+          <p className="text-zinc-400 max-w-xl mx-auto text-base md:text-lg">
             Zobacz przemianę naszych podopiecznych. Każda historia to dowód na to,
             że z determinacją wszystko jest możliwe.
           </p>

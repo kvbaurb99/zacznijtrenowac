@@ -56,19 +56,19 @@ export function About() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 md:mb-20 relative">
+        <div className="text-center mb-10 md:mb-20 relative">
           {/* Decorative lines around header */}
           <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-px h-12 bg-linear-to-b from-transparent via-zinc-700/30 to-zinc-600/20 hidden md:block" />
           <div className="absolute left-1/4 top-1/2 -translate-y-1/2 w-16 h-px bg-linear-to-r from-transparent to-zinc-700/20 hidden lg:block" />
           <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-16 h-px bg-linear-to-l from-transparent to-zinc-700/20 hidden lg:block" />
 
-          <span className="inline-block px-4 py-1.5 rounded-full border border-zinc-700/50 bg-zinc-900/60 text-zinc-400 text-sm mb-4 tracking-wide uppercase backdrop-blur-sm">
+          <span className="inline-block px-4 py-1.5 rounded-full border border-zinc-700/50 bg-zinc-900/60 text-zinc-400 text-xs md:text-sm mb-4 tracking-wide uppercase backdrop-blur-sm">
             Poznaj nas
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Twoi trenerzy <span className="text-zinc-500">personalni</span>
           </h2>
-          <p className="text-zinc-400 text-lg md:text-lg max-w-2xl mx-auto">
+          <p className="text-zinc-400 text-base md:text-lg max-w-2xl mx-auto">
             Razem tworzymy zespół, który pomoże Ci osiągnąć wymarzoną sylwetkę
           </p>
         </div>
@@ -149,8 +149,8 @@ export function About() {
               </div>
 
               {/* Description */}
-              <div className="space-y-4 text-zinc-300 leading-relaxed text-lg">
-                <p className="text-lg text-zinc-200">
+              <div className="space-y-4 text-zinc-300 leading-relaxed text-base md:text-lg">
+                <p className="text-base md:text-lg text-zinc-300">
                   Poznaliśmy się na siłowni — w miejscu, gdzie rodzi się siła, determinacja
                   i walka o lepszą wersję siebie. Nie wiedzieliśmy wtedy, że oprócz mięśni
                   i kondycji zbudujemy coś znacznie ważniejszego. Z treningu na trening,
@@ -174,7 +174,7 @@ export function About() {
                 className="group flex items-center max-w-fit gap-3 px-8 py-4 backdrop-blur-xl bg-zinc-900/50 border border-zinc-700/40 rounded-full font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-zinc-800/60 hover:border-zinc-600/50 hover:shadow-lg hover:shadow-zinc-900/50"
               >
                 <ArrowRight className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors" />
-                <span className="text-zinc-300 group-hover:text-white transition-colors">
+                <span className="text-zinc-300 group-hover:text-white transition-colors text-sm md:text-base">
                   Umów się na trening
                 </span>
               </Link>

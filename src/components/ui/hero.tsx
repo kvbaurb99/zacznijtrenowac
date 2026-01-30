@@ -74,7 +74,7 @@ export function Hero() {
         .delay-600 { animation-delay: 0.6s; }
       `}</style>
 
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-28 pb-6 sm:pb-8 min-h-screen flex items-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-36 sm:pt-24 lg:pt-28 pb-6 sm:pb-8 min-h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-6 sm:gap-8 lg:gap-16 xl:gap-20 w-full max-w-[1400px] mx-auto">
 
           {/* Content */}
@@ -102,7 +102,7 @@ export function Hero() {
             <div className="absolute bottom-16 sm:bottom-20 -left-2 sm:-left-4 w-2 sm:w-3 h-2 sm:h-3 bg-zinc-600/30 rotate-45 hidden md:block animate-float delay-300" />
             <div className="absolute top-1/3 -right-4 sm:-right-8 w-3 sm:w-4 h-px bg-linear-to-r from-zinc-500/50 to-transparent hidden md:block" />
 
-            <div className="relative text-center lg:text-left">
+            <div className="relative text-left">
               {/* Heading */}
               <h1 className="text-3xl min-[480px]:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] mb-4 sm:mb-6 opacity-0 animate-fade-in-up">
                 Zacznij
@@ -119,7 +119,7 @@ export function Hero() {
               </p>
 
               {/* Features mini */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-10 opacity-0 animate-fade-in-up delay-200">
+              <div className="flex flex-wrap justify-start gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-10 opacity-0 animate-fade-in-up delay-200">
                 <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-zinc-900/50 border border-zinc-700/40 backdrop-blur-sm hover:border-zinc-600/50 hover:bg-zinc-800/50 transition-all duration-300">
                   <Dumbbell className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-400" />
                   <span className="text-zinc-300 text-xs sm:text-sm">Treningi personalne</span>
@@ -221,7 +221,7 @@ export function Hero() {
               </div>
 
               {/* Caption */}
-              <div className="mt-3 sm:mt-4 text-center lg:text-left opacity-0 animate-fade-in delay-600">
+              <div className="mt-3 sm:mt-4 text-left opacity-0 animate-fade-in delay-600 hidden md:block">
                 <p className="text-zinc-500 text-xs sm:text-sm">Dariusz Sklarczyk & Asia Rozmus-Sklarczyk</p>
               </div>
             </div>
