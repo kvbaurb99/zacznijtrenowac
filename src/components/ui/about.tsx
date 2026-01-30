@@ -41,7 +41,7 @@ export function About() {
   });
 
   return (
-    <section id="about" className="mt-16 pb-16 bg-zinc-950 relative overflow-hidden">
+    <section id="about" className="mt-8 pb-16 bg-zinc-950 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-1/4 -left-32 w-64 h-64 bg-white/5 rounded-full blur-[100px]" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-zinc-800/30 rounded-full blur-[120px]" />
@@ -79,8 +79,8 @@ export function About() {
           <div
             ref={imageRef}
             className={`lg:col-span-5 relative transition-all duration-1000 ease-out ${imageInView
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 -translate-x-12"
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-12"
               }`}
           >
             <div className="relative group">
@@ -119,8 +119,8 @@ export function About() {
           <div
             ref={contentRef}
             className={`lg:col-span-7 relative transition-all duration-1000 ease-out delay-200 ${contentInView
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 translate-x-12"
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 translate-x-12"
               }`}
           >
             {/* Decorative gradient backgrounds */}
@@ -192,8 +192,8 @@ export function About() {
               <div
                 key={index}
                 className={`group relative p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/50 hover:border-zinc-700/80 transition-all duration-700 hover:bg-zinc-900/60 backdrop-blur-sm ${servicesInView
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-8"
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
                   }`}
                 style={{
                   transitionDelay: servicesInView ? `${index * 150}ms` : "0ms",

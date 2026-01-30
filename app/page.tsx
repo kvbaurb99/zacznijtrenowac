@@ -9,6 +9,30 @@ const About = dynamic(
   }
 );
 
+const Cooperation = dynamic(
+  () => import("@/src/components/ui/cooperation").then((mod) => mod.Cooperation),
+  {
+    loading: () => <SectionSkeleton />,
+    ssr: true,
+  }
+);
+
+const Services = dynamic(
+  () => import("@/src/components/ui/services").then((mod) => mod.Services),
+  {
+    loading: () => <SectionSkeleton />,
+    ssr: true,
+  }
+);
+
+const Vouchers = dynamic(
+  () => import("@/src/components/ui/vouchers").then((mod) => mod.Vouchers),
+  {
+    loading: () => <SectionSkeleton />,
+    ssr: true,
+  }
+);
+
 const Transformations = dynamic(
   () =>
     import("@/src/components/ui/transformations").then(
@@ -34,6 +58,9 @@ export default function Home() {
       <Hero />
       <About />
       <Transformations />
+      <Cooperation />
+      <Services />
+      <Vouchers />
       <Contact />
     </main>
   );

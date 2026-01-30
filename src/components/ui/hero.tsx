@@ -185,7 +185,6 @@ export function Hero() {
                       fill
                       priority
                       fetchPriority="high"
-                      sizes="(max-width: 640px) 65vw, (max-width: 1024px) 45vw, 400px"
                       className="object-cover object-top"
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-zinc-950/70 via-transparent to-zinc-950/10" />

@@ -1,76 +1,80 @@
 "use client";
 
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { memo, useMemo } from "react";
 import { useSlider } from "@/src/hooks/use-slider";
 
+import Img0 from "@/assets/transformations/image0.jpeg";
+import Img7 from "@/assets/transformations/image7.jpeg";
+import Img4975 from "@/assets/transformations/IMG_4975.jpg";
+import Img4992 from "@/assets/transformations/IMG_4992.jpg";
+import Img4997 from "@/assets/transformations/IMG_4997.jpg";
+import Img4996 from "@/assets/transformations/IMG_4996.jpg";
+
 const TRANSFORMATIONS = [
-  { id: 1 },
-  { id: 2 },
-  { id: 3 },
-  { id: 4 },
-  { id: 5 },
-  { id: 6 },
+  { id: 1, src: Img0, alt: "Metamorfoza 1" },
+  { id: 2, src: Img4992, alt: "Metamorfoza 2" },
+  { id: 3, src: Img4975, alt: "Metamorfoza 3" },
+  { id: 4, src: Img7, alt: "Metamorfoza 4" },
+  { id: 5, src: Img4997, alt: "Metamorfoza 5" },
+  { id: 6, src: Img4996, alt: "Metamorfoza 5" },
 ];
 
 const SLIDER_BREAKPOINTS = [
   { width: 768, itemsPerPage: 2 },
+  { width: 1024, itemsPerPage: 3 },
 ];
 
 const TransformationCard = memo(function TransformationCard({
   index,
+  src,
+  alt,
 }: {
   index: number;
+  src: (typeof TRANSFORMATIONS)[number]["src"];
+  alt: string;
 }) {
   return (
-    <div className="group relative rounded-2xl overflow-hidden cursor-pointer">
-      {/* Card container with aspect ratio */}
-      <div className="aspect-3/4 relative bg-zinc-900">
-        {/* Split view container */}
-        <div className="absolute inset-0 flex">
-          {/* Before side */}
-          <div className="w-1/2 relative overflow-hidden border-r border-zinc-950/80 group-hover:w-[40%] transition-all duration-700 ease-out">
-            <div className="absolute inset-0 bg-zinc-800" />
-            {/* Placeholder gradient */}
-            <div className="absolute inset-0 bg-linear-to-br from-zinc-700/50 to-zinc-900/50" />
-          </div>
-
-          {/* After side */}
-          <div className="w-1/2 relative overflow-hidden group-hover:w-[60%] transition-all duration-700 ease-out">
-            <div className="absolute inset-0 bg-zinc-700" />
-            {/* Placeholder gradient */}
-            <div className="absolute inset-0 bg-linear-to-br from-zinc-600/50 to-zinc-800/50" />
-          </div>
-        </div>
-
-        {/* Divider line */}
-        <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] bg-white/20 group-hover:left-[40%] transition-all duration-700 ease-out z-10" />
-
-        {/* Labels */}
+    <div className="group relative rounded-xl overflow-hidden cursor-pointer max-w-[320px] mx-auto md:max-w-none md:mx-0">
+      {/* Jedno zdjęcie na kartę – zdjęcie już zawiera przed (lewa) i po (prawa) */}
+      <div className="aspect-4/5 relative bg-zinc-900">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          loading="lazy"
+          className={
+            index === 1
+              ? "object-fill object-center"
+              : index === 3
+                ? "object-contain object-center"
+                : "object-cover object-center"
+          }
+          sizes="(max-width: 768px) 320px, (max-width: 1024px) 50vw, 33vw"
+        />
+        {/* Badge Przed – lewy róg */}
         <div className="absolute top-4 left-4 z-20">
           <span className="px-3 py-1.5 bg-black/60 backdrop-blur-sm rounded-full text-xs font-medium text-zinc-300 uppercase tracking-wider">
             Przed
           </span>
         </div>
+        {/* Badge Po – prawy róg */}
         <div className="absolute top-4 right-4 z-20">
           <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-zinc-900 uppercase tracking-wider">
             Po
           </span>
         </div>
-
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-
         {/* Bottom gradient fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-black/40 to-transparent" />
-
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-black/40 to-transparent z-10" />
         {/* Card number */}
         <div className="absolute bottom-4 left-4 z-20">
           <span className="text-5xl font-bold text-white/10 group-hover:text-white/20 transition-colors duration-500">
             {String(index + 1).padStart(2, "0")}
           </span>
         </div>
-
         {/* Corner decorations */}
         <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-white/20 rounded-br-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
         <div className="absolute top-12 left-4 w-6 h-6 border-l-2 border-t-2 border-white/10 rounded-tl-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
@@ -145,17 +149,27 @@ export function Transformations() {
   return (
     <section
       id="transformations"
-      className="py-20 md:py-28 bg-zinc-950 text-white relative overflow-hidden"
+      className="py-20 bg-zinc-950 text-white relative overflow-hidden"
     >
-      {/* Background decorations */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-zinc-800/20 rounded-full blur-[150px]" />
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-zinc-800/15 rounded-full blur-[120px]" />
-      </div>
+      {/* Gradient tło – delikatne rozświetlenia */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_30%_20%,rgba(255,255,255,0.03)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_75%_80%,rgba(255,255,255,0.025)_0%,transparent_50%)]" />
+
+      {/* Miękkie orby / blury */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-zinc-700/15 rounded-full blur-[140px]" />
+      <div className="absolute bottom-1/4 -right-32 w-[480px] h-80 bg-zinc-600/12 rounded-full blur-[120px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-white/[0.02] rounded-full blur-[100px]" />
+
+      {/* Delikatna siatka kropek */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_0)] bg-size-[40px_40px] opacity-50" />
+
+      {/* Linie oddzielające */}
+      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-zinc-700/40 to-transparent" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <header className="text-center mb-14 md:mb-20">
+        <header className="text-center mb-14">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/50 text-zinc-400 text-sm mb-6">
             <span className="w-2 h-2 rounded-full bg-white" />
             Realne efekty
@@ -169,12 +183,11 @@ export function Transformations() {
           </p>
         </header>
 
-        {/* Slider */}
-        <div className="relative max-w-6xl mx-auto px-6 md:px-8">
+        {/* Slider – węższa sekcja w containerze */}
+        <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8">
           <SliderNavButton direction="prev" onClick={prevSlide} />
           <SliderNavButton direction="next" onClick={nextSlide} />
 
-          {/* Slides Track */}
           <div className="overflow-hidden rounded-2xl">
             <div
               className="flex transition-transform duration-500 ease-out"
@@ -183,9 +196,9 @@ export function Transformations() {
               {TRANSFORMATIONS.map((item, index) => (
                 <div
                   key={item.id}
-                  className="w-full md:w-1/2 shrink-0 p-2"
+                  className="w-full md:w-1/2 lg:w-1/3 shrink-0 p-2"
                 >
-                  <TransformationCard index={index} />
+                  <TransformationCard index={index} src={item.src} alt={item.alt} />
                 </div>
               ))}
             </div>
