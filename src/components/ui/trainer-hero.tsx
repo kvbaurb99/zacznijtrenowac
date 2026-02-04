@@ -66,23 +66,6 @@ export function TrainerHero({
                   priority
                   sizes="(max-width: 768px) 100vw, 40vw"
                 />
-
-                {/* Floating Badge */}
-                <div className="absolute bottom-6 left-6 right-6 z-20">
-                  <div className="backdrop-blur-xl bg-white/[0.03] border border-white/10 rounded-xl p-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
-                        <Trophy className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-white/60">Certyfikowany</p>
-                        <p className="font-medium text-white">
-                          Trener Personalny
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               {/* Floating Decorative Elements */}

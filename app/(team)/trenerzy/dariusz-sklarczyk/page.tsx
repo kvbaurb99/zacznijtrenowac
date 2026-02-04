@@ -10,17 +10,6 @@ const SPECIALIZATIONS = [
   "Poprawa kondycji i zdrowia",
 ] as const;
 
-const LOCATIONS = [
-  {
-    name: "Mariana Langiewicza 26",
-    address: "43-300 Bielsko-Biała",
-  },
-  {
-    name: "Kolista 23",
-    address: "43-316 Bielsko-Biała",
-  },
-] as const;
-
 const TRANSFORMATIONS = [
   {
     id: 1,
@@ -90,7 +79,6 @@ export default function DariuszSinglePage() {
       email="darektrener@icloud.com"
       phoneHref="tel:+48600851174"
       specializations={SPECIALIZATIONS}
-      locations={LOCATIONS}
       ctaText="Gotowy"
       transformations={TRANSFORMATIONS}
     />

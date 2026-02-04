@@ -4,11 +4,6 @@ import { TrainerSpecializations } from "./trainer-specializations";
 import { TrainerLocations } from "./trainer-locations";
 import { TrainerCTA } from "./trainer-cta";
 
-interface Location {
-  name: string;
-  address: string;
-}
-
 interface Transformation {
   id: number;
   name: string;
@@ -25,7 +20,6 @@ interface TrainerPageProps {
   phoneHref: string;
   image: string;
   specializations: readonly string[];
-  locations: readonly Location[];
   ctaText: string;
   transformations: readonly Transformation[];
 }
@@ -38,7 +32,6 @@ export function TrainerPage({
   phoneHref,
   image,
   specializations,
-  locations,
   ctaText,
   transformations,
 }: TrainerPageProps) {
@@ -52,9 +45,7 @@ export function TrainerPage({
         phoneHref={phoneHref}
         image={image}
       />
-      <TrainerSpecializations specializations={specializations} />
-      <TrainerTransformations transformations={transformations} />
-      <TrainerLocations locations={locations} />
+      <TrainerLocations />
       <TrainerCTA ctaText={ctaText} phoneHref={phoneHref} />
     </main>
   );

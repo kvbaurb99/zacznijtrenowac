@@ -10,13 +10,6 @@ const SPECIALIZATIONS = [
   "Praca z seniorami",
 ] as const;
 
-const LOCATIONS = [
-  {
-    name: "Kolista 23",
-    address: "43-316 Bielsko-Biała",
-  },
-] as const;
-
 const TRANSFORMATIONS = [
   {
     id: 1,
@@ -97,7 +90,6 @@ export default function AsiaSinglePage() {
       phoneHref="tel:+48518989721"
       image={AsiaImage.src}
       specializations={SPECIALIZATIONS}
-      locations={LOCATIONS}
       ctaText="Gotowa"
       transformations={TRANSFORMATIONS}
     />

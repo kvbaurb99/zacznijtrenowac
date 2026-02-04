@@ -1,6 +1,8 @@
 "use client";
+
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
 import { useSlider } from "@/src/hooks/use-slider";
 
 import Img0 from "@/assets/transformations/image0.jpeg";
@@ -51,18 +53,7 @@ function TransformationCard({
           }
           sizes="(max-width: 768px) 320px, (max-width: 1024px) 50vw, 33vw"
         />
-        {/* Badge Przed – lewy róg */}
-        <div className="absolute top-4 left-4 z-20">
-          <span className="px-3 py-1.5 bg-black/60 backdrop-blur-sm rounded-full text-xs font-medium text-zinc-300 uppercase tracking-wider">
-            Przed
-          </span>
-        </div>
-        {/* Badge Po – prawy róg */}
-        <div className="absolute top-4 right-4 z-20">
-          <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-zinc-900 uppercase tracking-wider">
-            Po
-          </span>
-        </div>
+
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
         {/* Bottom gradient fade */}
@@ -131,7 +122,12 @@ function PaginationDots({
   );
 }
 
+const MOBILE_PEEK_PERCENT = 85; // na mobile: jeden slajd 85% → widać ~15% drugiego
+
 export function Transformations() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+
   const {
     currentIndex,
     maxIndex,
@@ -142,8 +138,35 @@ export function Transformations() {
   } = useSlider({
     totalItems: TRANSFORMATIONS.length,
     breakpoints: SLIDER_BREAKPOINTS,
-    defaultItemsPerPage: 2,
+    defaultItemsPerPage: 1,
   });
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    setTouchStartX(e.targetTouches[0].clientX);
+  }, []);
+
+  const handleTouchEnd = useCallback(
+    (e: React.TouchEvent) => {
+      if (touchStartX == null) return;
+      const endX = e.changedTouches[0].clientX;
+      const diff = touchStartX - endX;
+      const minSwipe = 50;
+      if (diff > minSwipe) nextSlide();
+      else if (diff < -minSwipe) prevSlide();
+      setTouchStartX(null);
+    },
+    [touchStartX, nextSlide, prevSlide]
+  );
+
+  const mobileTranslateX = currentIndex * MOBILE_PEEK_PERCENT;
+  const sliderTranslate = isMobile ? mobileTranslateX : translateX;
 
   return (
     <section
@@ -187,15 +210,23 @@ export function Transformations() {
           <SliderNavButton direction="prev" onClick={prevSlide} />
           <SliderNavButton direction="next" onClick={nextSlide} />
 
-          <div className="overflow-hidden rounded-2xl">
+          <div
+            className="overflow-hidden rounded-2xl touch-pan-y"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
             <div
-              className="flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${translateX}%)` }}
+              className="flex transition-transform duration-500 ease-out will-change-transform"
+              style={
+                isMobile
+                  ? { transform: `translateX(calc(-${currentIndex} * (85% + 0.5rem)))` }
+                  : { transform: `translateX(-${sliderTranslate}%)` }
+              }
             >
               {TRANSFORMATIONS.map((item, index) => (
                 <div
                   key={item.id}
-                  className="w-1/2 lg:w-1/3 shrink-0 p-1 sm:p-2"
+                  className="w-[85%] shrink-0 md:w-1/2 lg:w-1/3 p-1 sm:p-2 pr-2 md:pr-0"
                 >
                   <TransformationCard index={index} src={item.src} alt={item.alt} />
                 </div>

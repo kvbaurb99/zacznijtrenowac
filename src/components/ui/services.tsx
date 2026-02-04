@@ -88,15 +88,12 @@ export function Services() {
             Oferta
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Nasze <span className="text-zinc-500">usługi</span>
+            Nasza <span className="text-zinc-500">oferta</span>
           </h2>
-          <p className="text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto">
-            Szeroka gama usług dopasowanych do Twoich potrzeb i celów
-          </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
           {SERVICES.map((service, index) => (
             <div
               key={index}
