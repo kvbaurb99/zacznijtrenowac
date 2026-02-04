@@ -33,11 +33,10 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
           ? "bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/50 py-4"
           : "bg-transparent py-6 border-transparent"
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
         {/* Logo */}
@@ -89,6 +88,7 @@ export function Navbar() {
                 <nav className="py-2" role="menu">
                   {trainers.map((trainer) => (
                     <Link
+                      prefetch={false}
                       key={trainer.href}
                       href={trainer.href}
                       className="block px-4 py-3 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800/50 transition-colors"
@@ -140,9 +140,8 @@ export function Navbar() {
             >
               Trenerzy
               <ChevronDown
-                className={`w-5 h-5 transition-transform duration-300 ${
-                  trainersOpen ? "rotate-180" : ""
-                }`}
+                className={`w-5 h-5 transition-transform duration-300 ${trainersOpen ? "rotate-180" : ""
+                  }`}
               />
             </button>
             {trainersOpen && (
