@@ -92,7 +92,7 @@ export function Navbar() {
             <div className="absolute top-full left-0 w-56 h-4" />
             <div className="absolute top-full left-0 pt-4 w-56 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-[opacity,transform] duration-300 transform group-hover:translate-y-0 translate-y-2 z-50">
               <div className="bg-zinc-900/95 backdrop-blur-md border border-zinc-800 rounded-xl shadow-2xl overflow-hidden">
-                <nav className="py-2" role="menu">
+                <nav className="py-4" role="menu">
                   {trainers.map((trainer) => (
                     <Link
                       prefetch={false}

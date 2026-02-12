@@ -33,16 +33,19 @@ export function Services() {
       id="services"
       className="py-14 lg:py-20 bg-zinc-950 relative overflow-hidden"
     >
-      {/* Background decorations */}
+      {/* Background */}
+      <div className="absolute inset-0">
+        {/* Square grid */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-size-[48px_48px] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_50%,black_30%,transparent_100%)]" />
+        {/* Gradient sweeps */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_80%_20%,rgba(255,255,255,0.035)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_15%_80%,rgba(255,255,255,0.025)_0%,transparent_50%)]" />
+        {/* Gradient orbs */}
+        <div className="absolute -top-20 right-1/4 w-[500px] h-[350px] bg-zinc-700/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 -left-20 w-80 h-80 bg-zinc-600/12 rounded-full blur-3xl" />
+      </div>
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-zinc-800/50 to-transparent" />
       <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-zinc-800/50 to-transparent" />
-
-      {/* Gradient orbs */}
-      <div className="absolute top-1/4 -right-32 w-72 h-72 bg-zinc-800/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/3 -left-32 w-64 h-64 bg-zinc-700/15 rounded-full blur-3xl" />
-
-      {/* Dot grid */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_0)] bg-size-[40px_40px] opacity-50" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
@@ -64,7 +67,7 @@ export function Services() {
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-14 xl:gap-16 items-start">
           {/* Left column – service tiles */}
           <div className="flex-1 w-full">
-            <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {SERVICES.map((service, index) => (
                 <div
                   key={index}
