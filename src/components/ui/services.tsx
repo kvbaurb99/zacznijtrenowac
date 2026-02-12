@@ -73,8 +73,8 @@ export function Services() {
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-zinc-800/50 to-transparent" />
 
       {/* Gradient orbs */}
-      <div className="absolute top-1/4 -right-32 w-72 h-72 bg-zinc-800/20 rounded-full blur-[100px]" />
-      <div className="absolute bottom-1/3 -left-32 w-64 h-64 bg-zinc-700/15 rounded-full blur-[80px]" />
+      <div className="absolute top-1/4 -right-32 w-72 h-72 bg-zinc-800/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/3 -left-32 w-64 h-64 bg-zinc-700/15 rounded-full blur-3xl" />
 
       {/* Grid pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
@@ -97,7 +97,7 @@ export function Services() {
           {SERVICES.map((service, index) => (
             <div
               key={index}
-              className="group relative p-6 sm:p-7 rounded-2xl bg-zinc-900/40 border border-zinc-800/50 hover:border-zinc-700/80 transition-all duration-500 hover:bg-zinc-900/60 backdrop-blur-sm hover:scale-[1.02]"
+              className="group relative p-6 sm:p-7 rounded-2xl bg-zinc-900/40 border border-zinc-800/50 hover:border-zinc-700/80 transition-[background-color,border-color,transform] duration-500 hover:bg-zinc-900/60 backdrop-blur-sm hover:scale-[1.02]"
             >
               {/* Glow effect on hover */}
               <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-white/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -126,7 +126,7 @@ export function Services() {
 
               {/* Icon */}
               <div className="relative mb-4">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-zinc-800/80 border border-zinc-700/50 flex items-center justify-center group-hover:border-zinc-600 group-hover:bg-zinc-800 transition-all duration-500">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-zinc-800/80 border border-zinc-700/50 flex items-center justify-center group-hover:border-zinc-600 group-hover:bg-zinc-800 transition-[background-color,border-color] duration-500">
                   <service.icon className="w-6 h-6 sm:w-7 sm:h-7 text-zinc-400 group-hover:text-white transition-colors duration-500" />
                 </div>
               </div>
@@ -154,7 +154,7 @@ export function Services() {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-zinc-900/50 border border-zinc-700/40 text-white text-sm sm:text-base font-medium hover:bg-zinc-800/60 hover:border-zinc-600/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-zinc-900/50 border border-zinc-700/40 text-white text-sm sm:text-base font-medium hover:bg-zinc-800/60 hover:border-zinc-600/50 transition-[background-color,border-color,transform] duration-300 hover:scale-105 backdrop-blur-sm"
           >
             Skontaktuj się z nami
             <svg

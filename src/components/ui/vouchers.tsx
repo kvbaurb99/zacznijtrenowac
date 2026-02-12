@@ -19,9 +19,9 @@ export function Vouchers() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_90%,rgba(255,255,255,0.01)_0%,transparent_55%)]" />
 
       {/* Miękkie orby / blury – białe, bardzo delikatne */}
-      <div className="absolute top-1/4 -left-24 w-80 h-80 bg-white/[0.028] rounded-full blur-[120px]" />
-      <div className="absolute bottom-1/3 -right-24 w-96 h-96 bg-white/[0.02] rounded-full blur-[140px]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-white/[0.015] rounded-full blur-[100px]" />
+      <div className="absolute top-1/4 -left-24 w-80 h-80 bg-white/[0.028] rounded-full blur-3xl" />
+      <div className="absolute bottom-1/3 -right-24 w-96 h-96 bg-white/[0.02] rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-white/[0.015] rounded-full blur-3xl" />
 
       {/* Delikatna siatka kropek */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.02)_1px,transparent_0)] bg-size-[32px_32px] opacity-40" />
@@ -62,7 +62,7 @@ export function Vouchers() {
             </div>
             <Link
               href="#contact"
-              className="group inline-flex text-sm md:text-base items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-white/10 text-white font-medium hover:bg-white/15 transition-all duration-300 hover:scale-[1.02]"
+              className="group inline-flex text-sm md:text-base items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-white/10 text-white font-medium hover:bg-white/15 transition-[background-color,transform] duration-300 hover:scale-[1.02]"
             >
               Zapytaj o voucher
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

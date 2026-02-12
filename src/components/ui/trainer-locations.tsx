@@ -38,7 +38,7 @@ export function TrainerLocations() {
           {LOCATIONS.map((location, index) => (
             <div
               key={index}
-              className="group relative p-8 backdrop-blur-xl bg-white/[0.02] border border-white/[0.08] rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.04] hover:border-white/[0.15] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]"
+              className="group relative p-8 backdrop-blur-xl bg-white/[0.02] border border-white/[0.08] rounded-2xl transition-[transform,background-color,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:bg-white/[0.04] hover:border-white/[0.15] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]"
             >
               {/* Hover Glow */}
               <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.04)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

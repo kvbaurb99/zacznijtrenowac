@@ -116,7 +116,7 @@ export function TrainerHero({
               <div className="flex flex-wrap gap-4">
                 <a
                   href={phoneHref}
-                  className="group relative px-8 py-4 bg-white text-black font-medium rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
+                  className="group relative px-8 py-4 bg-white text-black font-medium rounded-full overflow-hidden transition-[transform,box-shadow] duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]"
                 >
                   <span className="relative z-10 flex items-center gap-3">
                     <Phone className="w-5 h-5" />
@@ -128,7 +128,7 @@ export function TrainerHero({
 
                 <a
                   href={`mailto:${email}`}
-                  className="group flex items-center gap-3 px-8 py-4 backdrop-blur-xl bg-white/[0.03] border border-white/10 rounded-full font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-white/[0.08] hover:border-white/20"
+                  className="group flex items-center gap-3 px-8 py-4 backdrop-blur-xl bg-white/[0.03] border border-white/10 rounded-full font-medium text-white transition-[transform,background-color,border-color] duration-300 hover:scale-105 hover:bg-white/[0.08] hover:border-white/20"
                 >
                   <Mail className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors" />
                   <span className="text-zinc-300 group-hover:text-white transition-colors">

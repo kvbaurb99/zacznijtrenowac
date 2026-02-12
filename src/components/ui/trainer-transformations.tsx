@@ -28,7 +28,7 @@ const TransformationCard = memo(function TransformationCard({
       {/* Image Container */}
       <div className="aspect-4/3 relative flex">
         {/* Before */}
-        <div className="w-1/2 bg-zinc-800 relative border-r border-zinc-950/50 group-hover:w-[45%] transition-all duration-500">
+        <div className="w-1/2 bg-zinc-800 relative border-r border-zinc-950/50 group-hover:w-[45%] transition-[width] duration-500">
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="text-zinc-500 text-sm font-medium">PRZED</span>
           </div>
@@ -38,7 +38,7 @@ const TransformationCard = memo(function TransformationCard({
         </div>
 
         {/* After */}
-        <div className="w-1/2 bg-zinc-700 relative group-hover:w-[55%] transition-all duration-500">
+        <div className="w-1/2 bg-zinc-700 relative group-hover:w-[55%] transition-[width] duration-500">
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="text-zinc-300 text-sm font-medium">PO</span>
           </div>
@@ -82,7 +82,7 @@ const SliderNavButton = memo(function SliderNavButton({
       onClick={onClick}
       className={`absolute ${
         isPrev ? "-left-4" : "-right-4"
-      } top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-zinc-900/80 border border-zinc-800 text-white hover:bg-white hover:text-black transition-all hidden md:flex`}
+      } top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-zinc-900/80 border border-zinc-800 text-white hover:bg-white hover:text-black transition-[background-color,color] hidden md:flex`}
       aria-label={isPrev ? "Poprzedni" : "Następny"}
     >
       <Icon className="w-6 h-6" />
@@ -107,7 +107,7 @@ const PaginationDots = memo(function PaginationDots({
         <button
           key={index}
           onClick={() => onDotClick(index)}
-          className={`transition-all duration-300 rounded-full ${
+          className={`transition-[width,background-color] duration-300 rounded-full ${
             currentIndex === index
               ? "w-8 h-2 bg-white"
               : "w-2 h-2 bg-zinc-700 hover:bg-zinc-500"

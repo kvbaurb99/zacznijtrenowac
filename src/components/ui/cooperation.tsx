@@ -70,9 +70,9 @@ export function Cooperation() {
         {/* Dot grid */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_0)] bg-size-[32px_32px] opacity-60" />
         {/* Gradient orbs */}
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-zinc-700/15 rounded-full blur-[140px]" />
-        <div className="absolute bottom-1/4 -right-32 w-[480px] h-80 bg-zinc-600/10 rounded-full blur-[120px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-white/[0.015] rounded-full blur-[100px]" />
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-zinc-700/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 -right-32 w-[480px] h-80 bg-zinc-600/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-white/[0.015] rounded-full blur-3xl" />
       </div>
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-zinc-800/50 to-transparent" />
       <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-zinc-800/50 to-transparent" />
@@ -81,7 +81,7 @@ export function Cooperation() {
         {/* Header */}
         <div
           ref={headerRef}
-          className={`text-center mb-14 lg:mb-20 transition-all duration-1000 ease-out ${
+          className={`text-center mb-14 lg:mb-20 transition-[opacity,transform] duration-1000 ease-out ${
             headerInView
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
@@ -115,7 +115,7 @@ export function Cooperation() {
                 {STEPS.map((step, index) => (
                   <div
                     key={index}
-                    className={`group relative flex gap-6 sm:gap-7 transition-all duration-700 ease-out ${
+                    className={`group relative flex gap-6 sm:gap-7 transition-[opacity,transform] duration-700 ease-out ${
                       stepsInView
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-8"
@@ -131,7 +131,7 @@ export function Cooperation() {
                       <div className="absolute inset-0 -m-2 pt-6 flex items-start justify-center">
                         <div className="w-14 h-14 bg-white/5 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </div>
-                      <div className="relative w-14 h-14 rounded-full bg-zinc-900 border-2 border-zinc-800 group-hover:border-zinc-600 flex items-center justify-center shadow-lg shadow-black/30 transition-all duration-500">
+                      <div className="relative w-14 h-14 rounded-full bg-zinc-900 border-2 border-zinc-800 group-hover:border-zinc-600 flex items-center justify-center shadow-lg shadow-black/30 transition-[border-color] duration-500">
                         <span className="text-base font-bold text-zinc-600 group-hover:text-white transition-colors duration-500">
                           {step.number}
                         </span>
@@ -158,7 +158,7 @@ export function Cooperation() {
 
           {/* Image */}
           <div
-            className={`w-full lg:flex-1 transition-all duration-1000 ease-out ${
+            className={`w-full lg:flex-1 transition-[opacity,transform] duration-1000 ease-out ${
               stepsInView
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-12"

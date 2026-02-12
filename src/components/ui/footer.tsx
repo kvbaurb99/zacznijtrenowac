@@ -41,7 +41,7 @@ export function Footer() {
                 <a
                   key={social.label}
                   href={social.href}
-                  className="p-2 rounded-full bg-zinc-900 hover:bg-white hover:text-black transition-all duration-300"
+                  className="p-2 rounded-full bg-zinc-900 hover:bg-white hover:text-black transition-[background-color,color] duration-300"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5" />

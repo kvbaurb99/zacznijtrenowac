@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Dumbbell, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import ImageLogo from "@/src/logo.svg";
 import Image from "next/image";
 
@@ -12,10 +12,17 @@ export function Navbar() {
   const [trainersOpen, setTrainersOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -33,7 +40,7 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
+      className={`fixed top-0 w-full z-50 transition-[background-color,border-color,padding,backdrop-filter] duration-300 ${scrolled
           ? "bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/50 py-4"
           : "bg-transparent py-6 border-transparent"
         }`}
@@ -66,7 +73,7 @@ export function Navbar() {
               className="text-sm font-medium text-zinc-300 hover:text-white transition-colors relative group"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-[width] duration-300 group-hover:w-full" />
             </Link>
           ))}
 
@@ -79,11 +86,11 @@ export function Navbar() {
             >
               Trenerzy
               <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-[width] duration-300 group-hover:w-full" />
             </button>
             {/* Niewidoczny element wypełniający przestrzeń między przyciskiem a dropdownem - utrzymuje hover */}
             <div className="absolute top-full left-0 w-56 h-4" />
-            <div className="absolute top-full left-0 pt-4 w-56 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 z-50">
+            <div className="absolute top-full left-0 pt-4 w-56 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-[opacity,transform] duration-300 transform group-hover:translate-y-0 translate-y-2 z-50">
               <div className="bg-zinc-900/95 backdrop-blur-md border border-zinc-800 rounded-xl shadow-2xl overflow-hidden">
                 <nav className="py-2" role="menu">
                   {trainers.map((trainer) => (

@@ -26,7 +26,7 @@ export function TrainerCTA({ ctaText, phoneHref }: TrainerCTAProps) {
 
           <a
             href={phoneHref}
-            className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-medium text-base rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_60px_rgba(255,255,255,0.25)]"
+            className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-medium text-base rounded-full transition-[transform,box-shadow] duration-300 hover:scale-105 hover:shadow-[0_0_60px_rgba(255,255,255,0.25)]"
           >
             <Phone className="w-5 h-5" />
             <span>Zadzwoń teraz</span>

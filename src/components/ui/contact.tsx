@@ -72,7 +72,7 @@ export function Contact() {
               {TRAINERS.map((trainer) => (
                 <div
                   key={trainer.name}
-                  className="p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800/50 hover:border-zinc-700 transition-all duration-300"
+                  className="p-6 rounded-2xl bg-zinc-900/30 border border-zinc-800/50 hover:border-zinc-700 transition-[border-color] duration-300"
                 >
                   <h4 className="text-lg md:text-xl font-bold text-white mb-6">
                     {trainer.name}
@@ -83,7 +83,7 @@ export function Contact() {
                       href={`tel:${trainer.phone.replace(/\s/g, "")}`}
                       className="flex items-center group text-zinc-300 hover:text-white transition-colors"
                     >
-                      <div className="w-10 h-10 rounded-full bg-zinc-800/50 flex items-center justify-center mr-4 border border-zinc-800 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all">
+                      <div className="w-10 h-10 rounded-full bg-zinc-800/50 flex items-center justify-center mr-4 border border-zinc-800 group-hover:bg-white group-hover:text-black group-hover:border-white transition-[background-color,color,border-color]">
                         <Phone className="w-4 h-4" />
                       </div>
                       <span className="font-medium">{trainer.phone}</span>
@@ -93,7 +93,7 @@ export function Contact() {
                       href={`mailto:${trainer.email}`}
                       className="flex items-center group text-zinc-300 hover:text-white transition-colors"
                     >
-                      <div className="w-10 h-10 rounded-full bg-zinc-800/50 flex items-center justify-center mr-4 border border-zinc-800 group-hover:bg-white group-hover:text-black group-hover:border-white transition-all">
+                      <div className="w-10 h-10 rounded-full bg-zinc-800/50 flex items-center justify-center mr-4 border border-zinc-800 group-hover:bg-white group-hover:text-black group-hover:border-white transition-[background-color,color,border-color]">
                         <Mail className="w-4 h-4" />
                       </div>
                       <span className="font-medium">{trainer.email}</span>
@@ -120,7 +120,7 @@ export function Contact() {
                     type="text"
                     id="name"
                     required
-                    className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all placeholder:text-zinc-600"
+                    className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-[border-color,box-shadow] placeholder:text-zinc-600"
                     placeholder="Twoje imię"
                   />
                 </div>
@@ -134,7 +134,7 @@ export function Contact() {
                   <input
                     type="tel"
                     id="phone"
-                    className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all placeholder:text-zinc-600"
+                    className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-[border-color,box-shadow] placeholder:text-zinc-600"
                     placeholder="Numer telefonu"
                   />
                 </div>
@@ -151,7 +151,7 @@ export function Contact() {
                   type="email"
                   id="email"
                   required
-                  className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all placeholder:text-zinc-600"
+                  className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-[border-color,box-shadow] placeholder:text-zinc-600"
                   placeholder="twoj@email.com"
                 />
               </div>
@@ -167,7 +167,7 @@ export function Contact() {
                   id="message"
                   required
                   rows={4}
-                  className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all placeholder:text-zinc-600 resize-none"
+                  className="w-full bg-zinc-950/50 border border-zinc-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-[border-color,box-shadow] placeholder:text-zinc-600 resize-none"
                   placeholder="Jak możemy Ci pomóc?"
                 />
               </div>

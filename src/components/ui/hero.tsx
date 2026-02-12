@@ -17,63 +17,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        @keyframes fadeInRight {
-          from {
-            opacity: 0;
-            transform: translateX(-30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        @keyframes pulse-slow {
-          0%, 100% { opacity: 0.15; }
-          50% { opacity: 0.25; }
-        }
-        @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
-        }
-        .animate-fade-in-up {
-          animation: fadeInUp 0.8s ease-out forwards;
-        }
-        .animate-fade-in-right {
-          animation: fadeInRight 0.8s ease-out forwards;
-        }
-        .animate-fade-in {
-          animation: fadeIn 0.6s ease-out forwards;
-        }
-        .animate-pulse-slow {
-          animation: pulse-slow 4s ease-in-out infinite;
-        }
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
-        .delay-400 { animation-delay: 0.4s; }
-        .delay-500 { animation-delay: 0.5s; }
-        .delay-600 { animation-delay: 0.6s; }
-      `}</style>
-
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-24 lg:pt-28 pb-6 sm:pb-8 min-h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-6 sm:gap-8 lg:gap-16 xl:gap-20 w-full max-w-[1400px] mx-auto">
 
@@ -120,15 +63,15 @@ export function Hero() {
 
               {/* Features mini */}
               <div className="flex flex-wrap justify-start gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-10 opacity-0 animate-fade-in-up delay-200">
-                <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-zinc-900/50 border border-zinc-700/40 backdrop-blur-sm hover:border-zinc-600/50 hover:bg-zinc-800/50 transition-all duration-300">
+                <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-zinc-900/50 border border-zinc-700/40 backdrop-blur-sm hover:border-zinc-600/50 hover:bg-zinc-800/50 transition-colors duration-300">
                   <Dumbbell className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-400" />
                   <span className="text-zinc-300 text-xs sm:text-sm">Treningi personalne</span>
                 </div>
-                <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-zinc-900/50 border border-zinc-700/40 backdrop-blur-sm hover:border-zinc-600/50 hover:bg-zinc-800/50 transition-all duration-300">
+                <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-zinc-900/50 border border-zinc-700/40 backdrop-blur-sm hover:border-zinc-600/50 hover:bg-zinc-800/50 transition-colors duration-300">
                   <Target className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-400" />
                   <span className="text-zinc-300 text-xs sm:text-sm">Plany dietetyczne</span>
                 </div>
-                <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-zinc-900/50 border border-zinc-700/40 backdrop-blur-sm hover:border-zinc-600/50 hover:bg-zinc-800/50 transition-all duration-300">
+                <div className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-zinc-900/50 border border-zinc-700/40 backdrop-blur-sm hover:border-zinc-600/50 hover:bg-zinc-800/50 transition-colors duration-300">
                   <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-400" />
                   <span className="text-zinc-300 text-xs sm:text-sm">Suplementacja</span>
                 </div>
@@ -138,7 +81,7 @@ export function Hero() {
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 mb-8 sm:mb-12 opacity-0 animate-fade-in-up delay-300">
                 <Link
                   href="#contact"
-                  className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-white text-zinc-950 text-sm sm:text-base font-semibold hover:bg-zinc-100 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/10"
+                  className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-white text-zinc-950 text-sm sm:text-base font-semibold hover:bg-zinc-100 transition-[background-color,transform,box-shadow] duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/10"
                 >
                   Umów bezpłatną konsultację
                   <svg
@@ -152,7 +95,7 @@ export function Hero() {
                 </Link>
                 <Link
                   href="#about"
-                  className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-full border border-zinc-700 text-zinc-300 text-sm sm:text-base font-semibold hover:bg-zinc-900 hover:border-zinc-600 transition-all duration-300 hover:shadow-lg hover:shadow-zinc-900/50"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-full border border-zinc-700 text-zinc-300 text-sm sm:text-base font-semibold hover:bg-zinc-900 hover:border-zinc-600 transition-[background-color,border-color,box-shadow] duration-300 hover:shadow-lg hover:shadow-zinc-900/50"
                 >
                   Poznaj nas
                 </Link>

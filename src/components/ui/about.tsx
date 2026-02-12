@@ -38,8 +38,8 @@ export function About() {
   return (
     <section id="about" className="mt-8 pb-16 bg-zinc-950 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-1/4 -left-32 w-64 h-64 bg-white/5 rounded-full blur-[100px]" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-zinc-800/30 rounded-full blur-[120px]" />
+      <div className="absolute top-1/4 -left-32 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-zinc-800/30 rounded-full blur-3xl" />
 
       {/* Diagonal lines pattern - right side */}
       <div className="absolute top-0 right-0 w-1/3 h-full overflow-hidden opacity-[0.02] hidden lg:block">
@@ -107,7 +107,7 @@ export function About() {
           {/* Content Column */}
           <div
             ref={contentRef}
-            className={`lg:col-span-7 relative transition-all duration-1000 ease-out delay-200 ${contentInView
+            className={`lg:col-span-7 relative transition-[opacity,transform] duration-1000 ease-out delay-200 ${contentInView
               ? "opacity-100 translate-x-0"
               : "opacity-0 translate-x-12"
               }`}
@@ -160,7 +160,7 @@ export function About() {
               </div>
               <Link
                 href={"#contact"}
-                className="group flex items-center max-w-fit gap-3 px-8 py-4 backdrop-blur-xl bg-zinc-900/50 border border-zinc-700/40 rounded-full font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-zinc-800/60 hover:border-zinc-600/50 hover:shadow-lg hover:shadow-zinc-900/50"
+                className="group flex items-center max-w-fit gap-3 px-8 py-4 backdrop-blur-xl bg-zinc-900/50 border border-zinc-700/40 rounded-full font-medium text-white transition-[background-color,border-color,transform,box-shadow] duration-300 hover:scale-105 hover:bg-zinc-800/60 hover:border-zinc-600/50 hover:shadow-lg hover:shadow-zinc-900/50"
               >
                 <ArrowRight className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors" />
                 <span className="text-zinc-300 group-hover:text-white transition-colors text-sm md:text-base">
@@ -180,7 +180,7 @@ export function About() {
             {SERVICES.map((service, index) => (
               <div
                 key={index}
-                className={`group relative p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/50 hover:border-zinc-700/80 transition-all duration-700 hover:bg-zinc-900/60 backdrop-blur-sm ${servicesInView
+                className={`group relative p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/50 hover:border-zinc-700/80 transition-[opacity,transform,background-color,border-color] duration-700 hover:bg-zinc-900/60 backdrop-blur-sm ${servicesInView
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
                   }`}
@@ -205,7 +205,7 @@ export function About() {
 
                 {/* Icon container */}
                 <div className="relative mb-5">
-                  <div className="w-14 h-14 rounded-xl bg-zinc-800/80 border border-zinc-700/50 flex items-center justify-center group-hover:border-zinc-600 group-hover:bg-zinc-800 transition-all duration-500">
+                  <div className="w-14 h-14 rounded-xl bg-zinc-800/80 border border-zinc-700/50 flex items-center justify-center group-hover:border-zinc-600 group-hover:bg-zinc-800 transition-[background-color,border-color] duration-500">
                     <service.icon className="w-7 h-7 text-zinc-400 group-hover:text-white transition-colors duration-500" />
                   </div>
                 </div>
