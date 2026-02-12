@@ -4,7 +4,6 @@ import { Footer } from "@/src/components/ui/footer";
 import { StructuredData } from "@/src/components/seo/structured-data";
 import { siteMetadata } from "@/src/components/seo/metadata";
 import { fontVariables } from "@/lib/fonts";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = siteMetadata;
 

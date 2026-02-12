@@ -57,10 +57,9 @@ export default function Home() {
     <main className="flex flex-col min-h-screen font-(family-name:--font-geist-sans)">
       <Hero />
       <About />
-      <Transformations />
       <Services />
       <Cooperation />
-
+      <Transformations />
       <Vouchers />
       <Contact />
     </main>
