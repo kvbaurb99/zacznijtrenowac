@@ -5,10 +5,6 @@ const SOCIAL_LINKS = [{ icon: Facebook, href: "#", label: "Facebook" }];
 
 const FOOTER_LINKS = [
   {
-    title: "Strony",
-    links: [{ label: "Blog", href: "/blog" }],
-  },
-  {
     title: "Trenerzy",
     links: [
       { label: "Dariusz Sklarczyk", href: "/trenerzy/dariusz-sklarczyk" },

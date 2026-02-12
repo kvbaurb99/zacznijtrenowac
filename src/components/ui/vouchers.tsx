@@ -12,7 +12,7 @@ const VOUCHERS = [
 
 export function Vouchers() {
   return (
-    <section id="vouchers" className="py-20 lg:py-28 bg-zinc-950 relative overflow-hidden">
+    <section id="vouchers" className="py-14 lg:py-20 bg-zinc-950 relative overflow-hidden">
       {/* Gradient tło – w stronę bieli, bardzo przezroczysty */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_20%,rgba(255,255,255,0.02)_0%,transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_85%_75%,rgba(255,255,255,0.016)_0%,transparent_50%)]" />
@@ -35,7 +35,7 @@ export function Vouchers() {
         <div className="text-center mb-14 lg:mb-20">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs md:text-sm border border-zinc-700/50 bg-zinc-900/60 text-zinc-400 mb-4 tracking-wide uppercase backdrop-blur-sm">
             <Gift className="w-4 h-4" />
-            Prezent
+            Vouchery
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
             Vouchery <span className="text-zinc-500">prezentowe</span>
@@ -46,9 +46,9 @@ export function Vouchers() {
         </div>
 
         {/* Layout: text left (no frame), images right – creative collage */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-28 xl:gap-32 items-center max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-28 xl:gap-32 items-center max-w-[1400px] mx-auto">
           {/* Left: Tekst – bez tła */}
-          <div className="lg:col-span-6 order-2 lg:order-1 space-y-8">
+          <div className="lg:col-span-6 order-2 lg:order-1 space-y-6">
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">
               Idealny prezent na każdą okazję
             </h3>

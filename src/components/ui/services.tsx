@@ -68,7 +68,7 @@ const SERVICES = [
 
 export function Services() {
   return (
-    <section id="services" className="py-20 lg:py-28 bg-zinc-950 relative overflow-hidden">
+    <section id="services" className="py-14 lg:py-20 bg-zinc-950 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-zinc-800/50 to-transparent" />
 
@@ -83,7 +83,7 @@ export function Services() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 lg:mb-20">
+        <div className="text-center mb-10 lg:mb-20">
           <span className="inline-block px-4 py-1.5 rounded-full text-xs md:text-sm border border-zinc-700/50 bg-zinc-900/60 text-zinc-400 mb-4 tracking-wide uppercase backdrop-blur-sm">
             Oferta
           </span>
