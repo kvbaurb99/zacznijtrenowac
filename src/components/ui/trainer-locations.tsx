@@ -5,8 +5,8 @@ import AquaFitnessLogo from "@/assets/aqua-fitness.png";
 import CityFitLogo from "@/assets/city-fit-.webp";
 
 const LOCATIONS = [
-  { name: "Kolista 23", address: "43-316 Bielsko-Biała", logo: CityFitLogo, logoAlt: "City Fit" },
-  { name: "Mariana Langiewicza 26", address: "43-300 Bielsko-Biała", logo: AquaFitnessLogo, logoAlt: "Fitness Aqua" },
+  { name: "Kolista 23", address: "43-316 Bielsko-Biała", logo: CityFitLogo, logoAlt: "Siłownia City Fit Bielsko-Biała" },
+  { name: "Mariana Langiewicza 26", address: "43-300 Bielsko-Biała", logo: AquaFitnessLogo, logoAlt: "Siłownia Fitness Aqua Bielsko-Biała" },
 ] as const;
 
 export function TrainerLocations() {

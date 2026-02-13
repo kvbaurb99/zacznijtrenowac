@@ -61,10 +61,10 @@ export function About() {
             Poznaj nas
           </span>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Twoi trenerzy <span className="text-zinc-500">personalni</span>
+            Twoi trenerzy personalni{" "}<span className="text-zinc-500">w Bielsku-Białej</span>
           </h2>
           <p className="text-zinc-400 text-base md:text-lg max-w-2xl mx-auto">
-            Razem tworzymy zespół, który pomoże Ci osiągnąć wymarzoną sylwetkę
+            Razem tworzymy zespół, który pomoże Ci osiągnąć wymarzoną sylwetkę. Treningi personalne, plany dietetyczne i suplementacja w Bielsku-Białej.
           </p>
         </div>
 
@@ -155,7 +155,8 @@ export function About() {
                 <p>
                   Dziś wiemy, że siłownia była tylko początkiem. Prawdziwa siła jest w byciu
                   razem, w pasji, którą dzielimy, i w miłości, która rośnie z każdym wspólnym
-                  krokiem — zarówno na treningowej macie, jak i w życiu.
+                  krokiem — zarówno na treningowej macie, jak i w życiu. Jako trenerzy personalni
+                  w Bielsku-Białej prowadzimy treningi na siłowniach City Fit (ul. Kolista 23) oraz Fitness Aqua (ul. Langiewicza 26).
                 </p>
               </div>
               <Link

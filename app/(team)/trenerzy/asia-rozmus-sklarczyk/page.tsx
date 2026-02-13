@@ -49,7 +49,7 @@ export default function AsiaSinglePage() {
   return (
     <TrainerPage
       name="Asia Rozmus-Sklarczyk"
-      description={`<p>Witaj !<br/>Mam na imię Asia i od wielu lat pomagam kobietom kształtować piękne sylwetki ❤️</p>
+      description={`<p>Witaj !<br/>Mam na imię Asia — jestem trenerką personalną w Bielsku-Białej i od wielu lat pomagam kobietom kształtować piękne sylwetki ❤️</p>
 
 <p>Jestem sportowcem, trenerką, mamą dwójki dzieci, żoną oraz osobą, która stworzyła własną markę 11 lat temu i do dziś spełniam się w tej roli idealnie!<br/>Kobietą, która powstała z pasji do ruchu, zdrowego stylu życia i wspierania kobiet na każdym etapie ich drogi.</p>
 
@@ -83,6 +83,8 @@ export default function AsiaSinglePage() {
 <p>Tworzę przestrzeń, w której kobiety czują się ważne, zauważone i wspierane. W mojej pracy łączę empatię, profesjonalizm i zrozumienie. Każdą podopieczną prowadzę indywidualnie, bo wiem, że każda kobieta zasługuje na coś więcej niż „gotowy plan".</p>
 
 <p>Wierzę, że prawdziwa zmiana zaczyna się w głowie, a ruch jest narzędziem, które może odmienić całe życie.</p>
+
+<p>Prowadzę treningi personalne w Bielsku-Białej na siłowni City Fit (ul. Kolista 23).</p>
 
 <p>Jeśli jesteś gotowa, aby w końcu postawić siebie na pierwszym miejscu — z radością Ci w tym pomogę ❤️❤️❤️</p>`}
       phone="518 989 721"

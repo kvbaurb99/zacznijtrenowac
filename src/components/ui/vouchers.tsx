@@ -6,8 +6,8 @@ import Voucher1 from "@/assets/vouchers/1.jpeg";
 import Voucher2 from "@/assets/vouchers/2.jpeg";
 
 const VOUCHERS = [
-  { src: Voucher1, alt: "Voucher prezentowy - Trening personalny" },
-  { src: Voucher2, alt: "Voucher prezentowy - Pakiet treningowy" },
+  { src: Voucher1, alt: "Voucher prezentowy - Trening personalny Bielsko-Biała" },
+  { src: Voucher2, alt: "Voucher prezentowy - Pakiet treningowy Bielsko-Biała" },
 ] as const;
 
 export function Vouchers() {
@@ -41,7 +41,7 @@ export function Vouchers() {
             Vouchery <span className="text-zinc-500">prezentowe</span>
           </h2>
           <p className="text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto">
-            Podaruj bliskim coś wyjątkowego — voucher na trening personalny to prezent, który zmienia nawyki i dodaje energii.
+            Podaruj bliskim coś wyjątkowego — voucher na trening personalny w Bielsku-Białej to prezent, który zmienia nawyki i dodaje energii.
           </p>
         </div>
 

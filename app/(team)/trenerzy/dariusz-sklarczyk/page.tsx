@@ -50,7 +50,7 @@ export default function DariuszSinglePage() {
     <TrainerPage
       name="Dariusz Sklarczyk"
       image={DarekImage.src}
-      description={`<p>Cześć, jestem Darek — trener personalny z ponad 20-letnim doświadczeniem, absolwent AWF w Katowicach i pasjonat sportów sylwetkowych od 15. roku życia.</p>
+      description={`<p>Cześć, jestem Darek — trener personalny z Bielska-Białej z ponad 20-letnim doświadczeniem, absolwent AWF w Katowicach i pasjonat sportów sylwetkowych od 15. roku życia.</p>
 
 <p>Przez dwie dekady pracy na siłowni pomogłem setkom osób odmienić ich sylwetki, zdrowie i pewność siebie. Liczne kursy i szkolenia dały mi solidne fundamenty, ale to właśnie lata praktyki z podopiecznymi nauczyły mnie najważniejszego — każdy człowiek jest inny i zasługuje na indywidualne podejście.</p>
 
@@ -73,6 +73,8 @@ export default function DariuszSinglePage() {
   <li>✔ trenować skutecznie i z głową</li>
 </ul>
 <p>— to chętnie Ci w tym pomogę.</p>
+
+<p>Prowadzę treningi personalne w Bielsku-Białej na siłowniach City Fit (ul. Kolista 23) oraz Fitness Aqua (ul. Langiewicza 26).</p>
 
 <p><strong>Zacznijmy pracować nad Twoją najlepszą wersją.</strong></p>`}
       phone="600 851 174"

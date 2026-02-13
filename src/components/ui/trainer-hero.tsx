@@ -59,7 +59,7 @@ export function TrainerHero({
 
                 <Image
                   src={image}
-                  alt={`${name} - Trener Personalny`}
+                  alt={`${name} - Trener Personalny Bielsko-Biała`}
                   fill
                   fetchPriority="high"
                   className="object-cover transition-transform duration-700 rounded-xl"

@@ -11,11 +11,11 @@ import Img4997 from "@/assets/transformations/IMG_4997.jpg";
 import Img4996 from "@/assets/transformations/IMG_4996.jpg";
 
 const TRANSFORMATIONS = [
-  { id: 1, src: Img0, alt: "Metamorfoza 1" },
-  { id: 2, src: Img4975, alt: "Metamorfoza 2" },
-  { id: 3, src: Img7, alt: "Metamorfoza 3" },
-  { id: 4, src: Img4997, alt: "Metamorfoza 4" },
-  { id: 5, src: Img4996, alt: "Metamorfoza 5" },
+  { id: 1, src: Img0, alt: "Metamorfoza podopiecznego - trening personalny Bielsko-Biała" },
+  { id: 2, src: Img4975, alt: "Efekty treningu personalnego - Zacznij Trenować Bielsko-Biała" },
+  { id: 3, src: Img7, alt: "Przemiana sylwetki - trener personalny Bielsko-Biała" },
+  { id: 4, src: Img4997, alt: "Rezultaty treningów personalnych - Bielsko-Biała" },
+  { id: 5, src: Img4996, alt: "Transformacja sylwetki - Zacznij Trenować Bielsko-Biała" },
 ];
 
 export function Transformations() {
@@ -144,8 +144,8 @@ export function Transformations() {
             Metamorfozy
           </h2>
           <p className="text-zinc-400 max-w-xl mx-auto text-base md:text-lg">
-            Zobacz przemianę naszych podopiecznych. Każda historia to dowód na
-            to, że z determinacją wszystko jest możliwe.
+            Zobacz przemianę naszych podopiecznych z Bielska-Białej. Każda historia to dowód na
+            to, że z determinacją i wsparciem trenera personalnego wszystko jest możliwe.
           </p>
         </header>
 

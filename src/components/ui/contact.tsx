@@ -51,7 +51,7 @@ export function Contact() {
             Rozpocznij współpracę
           </h2>
           <p className="text-zinc-400 max-w-2xl text-base md:text-lg">
-            Masz pytania? Chcesz umówić się na trening? Wypełnij formularz lub
+            Masz pytania? Chcesz umówić się na trening personalny w Bielsku-Białej? Wypełnij formularz lub
             skontaktuj się bezpośrednio z nami.
           </p>
         </div>

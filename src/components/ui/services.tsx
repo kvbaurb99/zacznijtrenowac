@@ -58,7 +58,7 @@ export function Services() {
             Nasza <span className="text-zinc-500">oferta</span>
           </h2>
           <p className="text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto">
-            Kompleksowe wsparcie treningowe dopasowane do Twoich indywidualnych
+            Kompleksowe wsparcie treningowe w Bielsku-Białej dopasowane do Twoich indywidualnych
             potrzeb i celów
           </p>
         </div>
@@ -123,7 +123,7 @@ export function Services() {
               <div className="aspect-[3/4] relative">
                 <Image
                   src={ServiceImg}
-                  alt="Trener personalny - Zacznij Trenować"
+                  alt="Trener personalny Bielsko-Biała - Zacznij Trenować"
                   fill
                   loading="lazy"
                   className="object-cover object-center"

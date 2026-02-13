@@ -58,7 +58,7 @@ export function Hero() {
 
               {/* Description */}
               <p className="text-zinc-400 text-sm sm:text-base lg:text-lg leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 opacity-0 animate-fade-in-up delay-100">
-                Utrata zbędnych kilogramów, budowanie masy mięśniowej, poprawa konkretnych partii ciała, zwiększenie siły bądź wytrzymałości, a może chcesz powrócić do formy po ciąży? Dopasujemy trening do Twojej indywidualnej potrzeby oraz podpowiemy co jeść aby Twój trening był jeszcze skuteczniejszy.
+                Trenerzy personalni w Bielsku-Białej. Utrata zbędnych kilogramów, budowanie masy mięśniowej, poprawa kondycji, zwiększenie siły bądź wytrzymałości, a może chcesz powrócić do formy po ciąży? Dopasujemy trening do Twojej indywidualnej potrzeby oraz podpowiemy co jeść, aby Twój trening był jeszcze skuteczniejszy.
               </p>
 
               {/* Features mini */}

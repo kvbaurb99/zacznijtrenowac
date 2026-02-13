@@ -173,7 +173,7 @@ export function Cooperation() {
               <div className="aspect-[4/3] relative">
                 <Image
                   src={AsiaImg}
-                  alt="Trener personalny Asia"
+                  alt="Trener personalny Asia Rozmus-Sklarczyk Bielsko-Biała"
                   fill
                   loading="lazy"
                   className="object-cover object-center"
