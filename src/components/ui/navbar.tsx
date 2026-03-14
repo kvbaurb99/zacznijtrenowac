@@ -152,12 +152,12 @@ export function Navbar() {
               />
             </button>
             {trainersOpen && (
-              <div className="mt-2 pl-4 flex flex-col gap-2">
+              <div className="mt-4 pl-2 flex flex-col gap-2">
                 {trainers.map((trainer) => (
                   <Link
                     key={trainer.href}
                     href={trainer.href}
-                    className="text-base text-zinc-400 hover:text-white transition-colors py-1"
+                    className="text-sm text-zinc-400 hover:text-white transition-colors py-1"
                     onClick={() => setIsOpen(false)}
                   >
                     {trainer.name}
