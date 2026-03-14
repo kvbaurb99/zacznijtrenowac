@@ -1,6 +1,7 @@
 import { TrainerPage } from "@/src/components/ui/trainer-page";
 import DarekImage from "@/assets/darek.webp";
 
+
 const SPECIALIZATIONS = [
   "Trening siłowy",
   "Przygotowanie do zawodów",
