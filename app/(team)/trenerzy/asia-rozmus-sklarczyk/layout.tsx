@@ -12,8 +12,8 @@ export async function generateMetadata(): Promise<Metadata> {
     description:
       "Asia Rozmus-Sklarczyk — trener personalny z wieloletnim doświadczeniem. Specjalizacja: trening dla kobiet, redukcja masy ciała, trening w ciąży i po porodzie, dietetyka sportowa. Bielsko-Biała.",
     robots: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
     },
     alternates: {
       canonical: PAGE_URL,

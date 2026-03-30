@@ -12,8 +12,8 @@ export async function generateMetadata(): Promise<Metadata> {
     description:
       "Dariusz Sklarczyk — trener personalny z ponad 20-letnim doświadczeniem, absolwent AWF Katowice. Specjalizacja: trening siłowy, budowa masy mięśniowej, przygotowanie do zawodów. Bielsko-Biała.",
     robots: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
     },
     alternates: {
       canonical: PAGE_URL,
