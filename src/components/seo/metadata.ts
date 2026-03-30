@@ -55,7 +55,7 @@ export const siteMetadata: Metadata = {
   },
 
   verification: {
-    google: "your-google-verification-code",
+    google: "iyNpePHQdn4osHr0WPxg1wWhQIHTiY6YySEhu_OCg-Y",
   },
 
   alternates: {
